@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+    固定标签不一定非要固定在浏览器可视区，还可以固定在版心处
+    算法：body50%(left:50%)+版心50%(margin-left)
+    -->
+
+    <style>
+   .w {
+    width: 800px;
+    height: 1400px;
+    background-color: pink;
+    margin: 0 auto;
+   }
+
+   .fix{
+    position: fixed;
+    left:50%;
+    /* 浏览器的一半 */
+    margin-left: 400px;
+    /* margin走版心的一半 */
+    width: 50px;
+    height: 150px;
+    background-color: skyblue;
+   }
+    </style>
+</head>
+<body>
+    <div class="fix"></div>
+    <div class="w">版心盒子 800px 11111111111111111111111111111111111111111111111111111111111111</div>
+    <!-- 这里注意 浮动起来后设置的是margin 没有覆盖底下盒子的内容 这个很好 -->
+</body>
+</html>

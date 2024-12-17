@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ul li{
+    list-style: none;
+    float: left;
+    position: relative;
+    width: 150px;
+    height: 200px;
+    border: 1px solid red;
+    /* border-collapse: collapse;
+    不行 中间的边边进行重合 变粗
+    */
+    margin-left: -1px;
+    /* 浮动起来的时候紧贴（左边的右边框与右边的左边框重合）这时margin-left往左一像素 往左走一像素，右边的左边框就将左边的右边框进行覆盖住了
+    */
+}
+
+/* 盒子没有定位，当我们鼠标经过时候，又要想使该盒子的四个边进行颜色演示，这时就可以增加相对定位。
+ 相对应为进行压住元素
+ */
+/* ul li:hover{
+    position: relative;
+    border: 1px solid yellowgreen;
+} */
+
+/* 
+在盒子有定位的情况下 则可以添加z-index属性进行覆盖
+更推荐下面这种
+*/
+
+ul li:hover{
+    z-index:1;
+    border: 1px solid yellowgreen;
+}
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

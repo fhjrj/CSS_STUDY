@@ -1,0 +1,402 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 首先确定网页框架的中心宽度 在将其居中 */
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #f3f5f7;
+}
+
+.header{
+    height: 48px;
+    margin:30px auto;
+    /* 会重叠w的margin,所以也要auto 对齐 */
+}
+
+.clear-fix::before,.clear-fix::after
+{
+    content: "";
+    display: table;
+    height: 0px;
+}
+
+.clear-fix::after{
+    clear: both;
+}
+
+.logger {
+    float: left;  
+    width: 198px;
+    height: 48px;
+}
+.height1 {
+    height: 48px;
+    width: 198px;
+}
+
+li {
+    list-style: none;
+}
+
+
+.nav {
+    margin-left: 60px;
+  float: left;
+  /* 这里注意 没有设置宽度 */
+}
+
+.nav li{
+    float: left;
+    margin: 0 15px;
+    padding: 0 10px;
+    /* 加了内外边距 没设置宽度 盒子 */
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav li a{
+    height: 48px;
+    /* li的高度被a撑起来了 */
+    display: inline-block;
+    /* 不方便设置宽度 用padding挤开 */
+    font-size: 18px;
+    color:#050505;
+    line-height: 48px;
+}
+
+/* a标签是行内元素 */
+
+
+/* 所以一般的高度是最里面往最外面撑开的 对于行内块/行内元素 */
+.nav li a:hover {
+    border-bottom: 1px solid rgba(107, 17, 181, 0.995);
+}
+
+
+.search{
+    height: 28px;
+    padding: 10px 0px;
+    float: left;
+    width: 412px;
+    margin-left: 50px;
+}
+/* 为了不撑大盒子  里面input28 总高48.要居中 所以height设置28 往外撑开就是48 */
+.search input{
+    float: left;
+    width: 345px;
+    height: 24px;
+    border-color: rgb(169, 234, 20);
+    border-right: none;
+    font-size: 14px;
+    padding-right: 15px;
+}
+
+/* button和input是行内块元素 行内块元素默认之间有空隙,但浮动的元素没有空隙。所以这里进行两个添加浮动，就是浮动的浮动 外面是search，里面是input和button*/
+.search button{
+    border: 0px;
+    float: left;
+    width: 50px;
+    height: 28px;
+    background-color: navy;
+    background-image: url(./img/学成网首页.jpg);
+}
+
+.user {
+    text-align: center;
+    float: right;
+    margin-top: 10px;
+    height: 28px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color:#666;
+    /* user盒子marggin值撑到中间了 */
+}
+
+.user img{
+    height: 28px;
+    vertical-align: middle;
+    /* 使文字和图片对齐 */
+}
+
+/* 头部结束 */
+
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+
+.banner .w{
+    height: 421px;
+    background: url(./img/11.jpg) no-repeat top center;
+    /* url不是字符串 */
+}
+
+.subneve {
+    float: left;
+    width: 170px;
+    height: 421px;
+    background:rgba(0,0,0,0.3);
+}
+
+.subneve ul li a{
+    font-size: 14px;
+    color: #fff;
+    /* a是行内元素 没有高度 */
+    /* 也可以对a进行inline-block显示 */
+    /* display: inline-block;
+    height: 45px;
+    line-height: 45px; */
+
+}
+
+.subneve ul li{
+  padding: 0 20px;
+  height: 45px;
+  line-height: 45px;
+  /* li是块元素 继承subneve的 170px */
+}
+
+.subneve ul li a span {
+    float: right;   
+}
+
+.subneve ul li :hover{
+    color: #004aff;
+}
+
+ .course{
+    width:230px ;
+    height: 300px;
+    background-color: #fff;
+    float: right;
+    margin-top: 50px;
+    /* 字符盒子都有top,为什么没有发生塌陷呢？
+    因为那是标准流，浮动的盒子不会进行塌陷
+    */
+}
+
+h2{
+    height: 48px;
+    line-height: 48px;
+    background-color: #1aa3d4;
+    color: #fff;
+    text-align: center;
+}
+
+
+.bd {
+   padding: 0 20px; 
+}
+
+.bd ul li h4{
+    font-size:16px;
+    color: #4e4e4e;
+}
+
+.bd ul li p{
+    font-size:12px;
+    color:#a5a5a5;
+}
+
+.bd ul li{
+    padding: 14px 0px;
+    /* li未设置高度*/
+    border-bottom: 1px solid gray;
+}
+
+.bd .more{
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-size:16px;
+    font-weight: 700;
+    margin-top: 2px;
+
+}
+
+.mokuai{
+    background-color: #ffffff97;
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    margin-top:10px;
+    /* 1400- */
+}
+
+.mokuai ul li{
+    float: left;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 10px;
+    
+}
+
+.mokuai ul li a{
+    color:#00a4ff;
+}
+
+
+.mokuai ul span{
+    display: block;
+    float: left;
+    padding-top: 17px;
+    color:gray;
+    margin: 0 10px;
+
+}
+
+.right{
+    float: right;
+    color:#00a4ff;
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 10px;
+}
+
+.jingpin{
+    width: 1200px;
+    margin:0 auto;
+    margin-top: 20px;
+}
+
+.jingpin .headers h3{
+  float: left;
+}
+
+.headers{
+    height: 45px;
+    padding: 0 10px;
+}
+
+.headers a{
+    float:right;
+    color:#050505ac
+}
+/* 这里两个盒子让其浮动在最上面 不让其在中间 不要都在中间即可 */
+
+.pps ul {
+ width:1215px ;
+}
+
+/* 这里未指定pps的高度，原因就是让父盒子被子盒子撑开(li标签) 设置的宽度也是ul */
+/*  变大父盒子的宽度 使得其能装下*/
+/* 230+15=245 245*5=1225 */
+.pps ul li{
+    height: 270px;
+    width: 228px;
+    background-color:#fff;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+
+.pps ul li img{
+    width: 100%;
+    /* 和父亲盒子一样宽 */
+}
+
+.pps ul li h4{
+    margin: 20px 20px 20px 25px;
+    font-size:14px;
+    font-weight: 400;
+}
+
+.info {
+    font-size:12px;
+    padding:0 20px 0 25px;
+}
+
+.co1,.co2,.co3{
+    display: inline-block;
+    margin-right: 10px;
+    height: 20px;
+    line-height: 20px;
+    font-size:12px;
+}
+
+.co1{
+    color: orange;
+}
+
+.co2,.co3{
+    height: 20px;
+    line-height: 20px;
+    color:#a5a5a5
+}
+
+.footer{
+    height: 415px;
+    background-color: #fff;
+}
+
+/* 这里注意 撑开盒子大小一定是在同一水平面上。一个盒子里面包含多个子盒子，子盒子又是浮动，其不会对父盒子撑开的，父盒子的高度为0，但父盒子的宽度会影响浮动的盒子 */
+/* 因为+上浮动后，元素具有行内块元素属性，，其不会继承父亲盒子的高和宽，但是排列会影响父盒子的宽度。这点牢记 所以浮动需要清除来保留父亲盒子的高度 */
+
+.footer .w{
+    padding-top: 35px;
+}
+
+.copyright{
+    float: left;
+}
+
+.link{
+    float: right;
+}
+
+.copyright p{
+    font-size: 12px;
+    color: #666;
+    margin: 10px 0 15px 0;
+}
+
+.copyright .app{
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 33px;
+    color: #00a4ff;
+}
+.link dl{
+    float: right;
+    margin-left: 100px;
+}
+
+.link dl dd a{
+    font-size: 16px;
+    color: #333;
+} 
+
+.link dl dt{
+    font-size:16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.mokuai ul li a{
+    color:rgb(21, 209, 171);
+}
+
+.mokuai ul li .clear-left{
+    margin-left: 0px;
+    color:#00a4ff ;
+}
+
+/* 外边距合并 改为padding 父子盒子隔离padding  margin都可以 */

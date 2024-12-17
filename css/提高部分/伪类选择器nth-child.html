@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类结构选择器</title>
+    <style>
+        /* 此选择器主要用来选择父级选择器里面的字元素 */
+        ul li{
+            list-style: none;
+        }
+
+        *{
+            margin:0px;
+            padding:0px;
+        }
+
+        /* 选择父亲标签的第一个儿子元素 */
+        /* 标准写法 指定第一个孩子是li */
+       .p li:first-child{
+        color: brown;
+       }
+       /* 选择最后一个儿子元素 */
+       .p li:last-child{
+        color: burlywood;
+       }
+
+       
+       /* nth-child(n):选择某个父元素的一个或者多个特定的子元素 ，n从1开始*/
+       /* 这个就是选择第四个元素 */
+       /* n比较特殊，可以是数字，关键字和公式 */
+       .p li:nth-child(4){
+        color:chartreuse
+       }
+
+       /* n=even 选择出所有偶数的孩子 */
+       .g :nth-child(even){
+        background-color: #ccc;
+       }
+       /* n=odd 选择出所有计数的孩子 */
+       .g :nth-child(odd){
+        background-color: skyblue;
+       }
+
+       /* 当n为公式时，即里面不是数字或者关键字 n从0开始 */
+      /* 由于是公式 从0开始 2n+1就是奇数 =even */
+
+       .kk :nth-child(2n+1){
+        background-color: aqua;
+       }
+       /*  */
+       .kk :nth-child(2n){
+        /* 选择所有偶数= odd */
+        background-color:rgba(22, 215, 19, 0.925);
+       }
+    </style>
+</head>
+<body>
+    <ul class="p">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+        <li>666</li>
+    </ul>
+    <br><br><br>
+    <!-- li ul 标签是块标签 -->
+    <ul class="g">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+        <li>666</li>
+        <li>777</li>
+        <li>888</li>
+    </ul>
+    <br><br>
+    <ul class="kk">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+        <li>666</li>
+        <li>777</li>
+        <li>888</li>
+    </ul>
+</body>
+</html>

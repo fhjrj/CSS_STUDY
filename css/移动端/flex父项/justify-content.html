@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* justify-content属性 设置主轴上的子元素的排列方式 注意是设置主轴 使用前要确定主轴是哪一个
+        
+        
+        */
+        div{
+            display: flex;
+            height: 300px;
+            width: 800px;
+            background-color: pink;
+            flex-direction: row;
+            /* 上面设置主轴为X轴 */
+         
+            /* justify-content: flex-start; 设置元素排列从主轴的头部开始  123--------------->X*/
+            /* justify-content: flex-end;设置元素排列从主轴尾部开始排列 即将元素都贴近主轴右边 顺序是不变的 ---------------->X 123
+               区分 flex-direction: row-reverse 一个是将元素贴近主轴最右侧排列 但顺序未改变。但另一个是改变了顺序的 这个注意！！！
+            */
+
+            /* justify-content: center; 使得所有元素居中在主轴对齐，默认情况下就是水平居中 */
+            /* justify-content: space-around;  平均分配剩余空间给所有盒子进行排列 */
+            justify-content: space-between;
+            /* 上面是先两边贴近 然后又在平分剩余空间 最重要*/
+
+        }
+        /* 注意一定要先设置主轴 */
+
+        div span{
+            width: 150px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>11</span>
+        <span>21</span>
+        <span>31</span>
+        <span>41</span>
+    </div>
+</body>
+</html>

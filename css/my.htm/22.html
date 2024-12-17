@@ -1,0 +1,68 @@
+<!-- 
+CSS选择器  作用：查找标签，设置样式
+基础选择器分类为：1.标签选择器
+                 标签选择器都是由标签名作为选择器的-》选择同名标签设置设置相同的样式,无法差异化同名选择器
+                 比如 p,h1,div,a,img
+
+                2.类选择器
+                此选择器可以差异化同名选择器
+                步骤： 定义 类选择器  ->.类名
+                       使用类选择器   ->标签添加class属性 class="类名"
+
+                一个类选择器可以给多个标签使用
+                一个标签只能有一个class属性 一个class可以带有多个类选择器(多个类名 多个用空格隔开)
+
+
+                3.id选择器
+                 此选择器进行查找标签，差异化设置标签的显示效果
+                 id选择器一般配合JS去使用
+                 步骤；  定义id选择器 ->#id名
+                         使用id选择器 标签中+id id="id名"
+                         同一个ID名在一个页面只能用一次
+                         和类选择器类似
+
+                4.通配符选择器
+                此标签查找页面所有的标签，设置相同的样式
+                步骤:   *,不需要调用，浏览器自动查找页面所有标签 设置相同的样式
+                
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS选择器</title>
+    <style>
+        p {
+            color: aqua;
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .size {
+            font-size: 30px;
+        }
+
+        #haha {
+            color: bisque;
+        }
+
+        *{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <p>111</p>
+    <p>222</p>
+    <p class="blue">333333</p>
+    <p class="blue size">444444</p>
+    <p id="haha">74747474</p>
+    <label>你好</label>
+    <label>你不好</label>
+    <!-- 在有多个选择器的情况下 id选择器优先级最高 类选择器和标签选择器一样 通配符选择器的优先级最低 -->
+</body>
+</html>

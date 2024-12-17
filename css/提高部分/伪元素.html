@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        ::after 在元素内部的后面插入内容
+        ::before 在元素内部的前面插入内容
+        这两个伪类标签会通过CSS的方式创建元素 但是属于行内元素。在文档树中中找不到。伪元素和标签选择器的权重都是1.
+
+        语法：
+        element::before{}
+        before和after都要有content属性
+        前者是在父元素之前创建元素（放在父盒子里面的最前面），后者是在父元素之后插入元素（放在父盒子里面的最后面）
+        */
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+        }
+
+        div::before{
+            content: " 我";
+
+        }
+        /* div::before的权重是2 包含了标签选择器和伪类选择器 */
+        div::after{
+            content:" 猪";
+        }
+
+        .span{
+            width: 200px;
+            height: 35px;
+            border: 1px solid pink;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div>是</div>
+    <br>
+    <div class="span"></div>
+</body>
+</html>

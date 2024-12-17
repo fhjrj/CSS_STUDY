@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 流式布局  即用百分比进行布局  主要是宽度
+      但流式布局要考虑伸缩边界 不能超过太多 
+      记住 主要管的是宽度 是百分比布局 高度可以准确像素
+    -->
+     <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+   section{
+    width: 100%;
+    min-width: 300px;
+    max-width: 800px;
+    /* 上面指定了 盒子最大最小 拉动网页时 最小不得小于300PX 达到300PX不会再移动 最大不能超过800PX 这样就保证了宽度的一定 */
+   }
+
+   section div{
+    float: left;
+    width: 50%;
+    height: 400px;
+   }
+
+   section div:nth-child(1){
+    background-color: pink;
+   }
+
+   section div:nth-child(2){
+    background-color: blueviolet;
+   }
+   /* 随着宽度进行伸缩 */
+     </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+    </section>
+</body>
+</html>
+<!-- 注意 移动的布局，不论是流式布局还是flex布局 一般都是用的百分比进行确定 这个注意 -->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        /* 固定位置是固定于浏览器可视区,不随滚动跳滚动而改变 */
+        /* 注意点
+         以浏览器的可视区域为参照点移动元素
+         和父元素没关系
+         不随滚动条滚动
+         ！！！固定区域不占有原先的位置，也可以看作为浮动，固定标签是脱标的。
+         
+
+
+         注意可视区不是body部分，下面将body部分进行伸缩 带有fix的标签依然是紧贴着可视区的右边
+         不是body右边
+
+         fix的盒子的长度/宽度限制也是浏览器可视区 其没有父盒子一说。
+        */
+        .text{
+            position: fixed;
+            right: 0px;
+            top:30px;
+            width: 100%;
+            height: 200px;
+            background-color: antiquewhite;
+        }
+
+        body{
+            min-width: 300px;
+            max-width: 600px;
+            width: 400px;
+            height: 2000px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="text"></div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+           width: 1226px;
+            height: 615px;
+            background-color: blue;
+            margin: 0 auto;
+            /* 高度计算是要减去padding值 */
+        }
+
+        .box .left {
+            float: left;
+        width: 234px;
+        height: 615px;
+        background-color: aqua;
+        }
+
+        .box .right {
+      background-color: chartreuse;
+      width: 992px;
+      height: 615px;
+      float: right;
+        }
+
+        .right>div {
+            float: left;
+            width: 234px;
+            height: 300px;
+            background-color: pink;
+            margin-left:14px;
+            margin-bottom: 14px;
+        }
+
+        .right .clear {
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+   <div class="box">
+    <div class="left"></div>
+    <div class="right">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div class="clear">5</div>
+        <div class="clear">6</div>
+        <div class="clear">7</div>
+        <div class="clear">8</div>
+<!-- 之所以要+clear是因为 BOTTOM下面chaol -->
+
+    </div>
+   </div>
+
+<!-- 
+   浮动和标准流的父元素一起使用
+   一个元素浮动了，剩下的兄弟元素都要浮动。
+
+   浮动的盒子只会影响后面的标准流，不会影响前面的标准流
+
+   A---浮动 B----标准流 C---浮动  由于浮动只影响后面的标准流，所有C前面的B不影响。C排在下一排，而不是紧贴着A的
+    -->
+    <script>
+
+    </script>
+</body>
+</html>

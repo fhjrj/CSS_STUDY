@@ -1,0 +1,32 @@
+<!--
+css打入html,在html中写css必须在标签style中使用
+代码格式是
+选择器
+{
+
+} 
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>体验CSS</title>
+    <style>
+        /*选择器+{css属性}*/
+        p {
+            color: brown;/*调整文字颜色*/
+            font-size: 30px;/*调整文字大小*/
+        }
+        div{
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<p>体验CSS</p>
+<div><input type="text"></div>
+<!-- 行内块元素不会继承 -->
+</body>
+</html>

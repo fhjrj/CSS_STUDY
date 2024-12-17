@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+        }
+
+        .m1{
+            position: absolute;
+            top:50px;
+            left:50px;
+            width: 200px;
+            height: 20px;
+            background-color: bisque;
+        }
+
+        .m2{
+        
+            width: 200px;
+            height: 20px;
+            background-color:red;
+        }
+
+        .q1{
+            width: 200px;
+            height: 20px;
+            background-color: bisque;
+        }
+
+        .q2{
+            position: absolute;
+            left:0px;
+            top:0px;
+            width: 200px;
+            height: 20px;
+            background-color:red;
+        }
+    </style>
+</head>
+<body>
+   <div class="father">
+       <div class="m1"></div>
+       <div class="m2"></div>  
+       <!-- 绝对定位的浮动 在前面添加绝对定位 不占有位置 后面的元素往上移动占有位置 -->
+   </div>
+   <br><br><br>
+
+   <div class="father">
+    <div class="q1"></div>
+    <div class="q2"></div>  
+      <!-- 绝对定位的浮动 在后面添加绝对定位 由于是浮动 可以覆盖住前面的元素 -->
+
+      <!-- 注意上面两种情况 -->
+</div>
+
+</body>
+</html>

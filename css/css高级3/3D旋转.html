@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+      不同于2D旋转 3D旋转可以指定元素以X周转动 Y周转动 Z周转动 或者自定义轴转动
+    -->
+
+
+    <style>
+        img{
+            height: 100px;
+            width: 100px;
+            margin: 0 auto;
+            transition: all 2s;
+            display: block;
+        }
+
+        body{
+            perspective: 300px;
+        }
+
+        .mm1:hover{
+            transform: rotateX(45deg);
+            /* 转动方向 左手法则 大拇指指向的方向平行于旋转轴线,四指弯曲的方向就是角度>0的方向
+              注意电脑上的X,Y，Z轴方向不是现实中的坐标系方向
+
+              ----------------->x
+              |
+              |
+              |
+              |
+              |
+              y
+            */
+        }
+
+        .mm2:hover{
+            transform: rotateY(90deg);
+        }
+
+        .mm3:hover{
+            transform: rotateZ(90deg);
+            /* 顺时针 */
+        }
+
+        .mm4:hover{
+
+            /* transform: rotate3d(x,y,z,deg) 
+               x,y,z表示旋转轴的矢量 表示你是否想沿着该轴进行旋转 最后一个才是角度
+            */
+            /* transform: rotate3d(1,0,0,90deg);
+               这个就是沿着X轴转动90度
+            */
+
+            /* transform: rotate3d(0,0,1,90deg);
+                    这个就是代表着Z轴旋转
+            */
+
+            /*
+              由于X,Y,Z代表矢量 下面就是满足平行四边形法则 沿着x,y矢量以1：1合成的方向进行旋转 
+             */
+             transform: rotate3d(1,1,0,90deg);
+        }
+    </style>
+</head>
+<body>
+    <img src="../tupian/agency bill.png" alt="" class="mm1">
+    <img src="../tupian/agency bill.png" alt="" class="mm2">
+    <img src="../tupian/agency bill.png" alt="" class="mm3">
+    <img src="../tupian/agency bill.png" alt="" class="mm4">
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left:50%;/*这个是距离边界*/
+            /* 首先 left走父亲盒子50% 父亲宽度的一半 */
+            /* 接着margin-left 负值 往左走 自己盒子宽度的一半 */
+            margin-left:-100px;
+            /* 总宽度是200  上面是水平居中*/
+            background-color: PINK;
+            top:50%;
+            margin-top: -100px;
+            /* 这个是垂直居中 */
+        }
+        /*
+        绝对定位和固定定位也和浮动类似,可以直接设置高度，高度。
+        */
+
+        .pp{
+            position: absolute;
+            background-color: pink;
+            width: 200px;
+            height: 150px;
+            top: 100px;
+            /* 边位移必须加上px单位 */
+        }
+
+        div{
+            background-color: aqua;
+            position: absolute;
+            /* 块级元素添加绝对或者固定定位，如果不给宽度或者高度，默认大小是内容的大小 */
+        }
+
+        /* 
+        脱标的盒子不会触发外边距塌陷
+        比如浮动，绝对位置，固定位置
+        */
+    </style>
+</head>
+<body>
+    <!-- 加了绝对定位的盒子不能使用margin:0 auto水平居中 -->
+     <div class="box"></div>
+     <span class="pp">1234</span>
+  <div>111</div>
+  <!-- 这里宽度就不在是一行了 -->
+</body>
+</html>
+<!-- 
+浮动元素只会压住标准流的合租，但不会压着盒子内的文字或者图片
+但是绝对定位/固定定位会压住下面标准流的所有内容
+所有可以让浮动做文字环绕
+-->

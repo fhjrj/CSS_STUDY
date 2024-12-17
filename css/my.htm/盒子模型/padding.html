@@ -1,0 +1,46 @@
+<!-- 盒子的内边界，防止内容和边界过于靠近
+padding关键字 同理也有四个 上下左右。
+分别是表示距离对应边界的内边距 
+-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边界</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            padding-left: 20px;
+            padding-top:40px;
+            padding-bottom: 20px;
+            padding-right: 10px;
+            /* padding的复合写法
+              后面跟着一个值  上下左右都是
+            padding: 20px 40px;
+              后面更着两个值 xpx ypx  上下xpx 左右ypx
+
+              三个值 x y z---> 上x 左右xy 右z
+
+              四个值的顺序是上右下左
+            */
+
+
+            /* 内边距会变大盒子，和border一样 如果要让盒子设置内外边距不变，那么weight/height减去多出来取得内边距作为新的高和宽即可 */
+          /* 不给盒子宽度 则盒子的宽度就是文字的宽度，对于行内/行内块元素 */
+          /* 不给盒子设置宽度/高度的情况下，即使继承父级标签的高度/宽度，进行padding不会撑开盒子，
+          比如div>li   div宽为140px 儿子继承父亲宽为140px（儿子什么也不设置） 左右边距进行padding 10px。这时li实际可用为120px 不会往外，而是往内
+          */
+
+        }
+    </style>
+ </head>
+ <body>
+    <div>6666666666666666666666666666666666
+        7777777777777
+        999999999999
+    </div>
+ </body>
+ </html>

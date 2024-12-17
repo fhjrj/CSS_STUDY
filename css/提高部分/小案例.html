@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+
+/* 伪类选择器小案例 */
+
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    div{
+        margin-left: 10px;
+        width: 200px;
+        height: 36px;
+        background-color: #fff;
+        border: 1px solid red;
+        position: relative;
+    }
+    div::after{
+        content: ">";
+        position: absolute;
+        right:5px;
+        top: 6px;
+        font-size: 18px;
+        color: red;
+       
+    }
+  </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

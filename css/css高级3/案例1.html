@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            perspective: 200px;
+            transform-style: preserve-3d;
+        }
+
+        .father{
+            height: 200px;
+            width: 200px;
+            margin: 100px auto;
+            border-radius: 50%;
+            position: relative;
+            transition: all 1s;
+            transform-style: preserve-3d;
+        }
+
+        .father div{
+            position: absolute;
+            top:0px;
+            left:0px;
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 200px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+       
+        .father div:first-child{   
+            background-color: rgb(137, 43, 226);
+            border: 2px solid rgb(91, 11, 171);
+            transform: translateZ(1px);
+            /* 这里不能使用z-index。因为3D转换效果会使得Z-index失效。只能进行 translateZ 使得其类似于z-index在浮动下漂浮的更高 使得两个进行隔离*/
+        }
+         
+        .father div:last-child{  
+            background-color:pink;
+            border: 2px solid  rgb(230, 85, 109);
+            transform: rotateY(180deg);
+            /* 字面先进行旋转 这样可以使得整体旋转时看到的字不是反的 */
+        }
+        
+
+         .father:hover{
+            transform: rotateY(180deg);
+         } 
+
+         /*这里的旋转父亲元素 相当于是整体旋转。但前提是两个子元素都要有浮动而且
+            on1位置和on2位置(translateZ)是不能重合的，这一点是很重要的。
+            所以当一个元素进行全体子元素反转时，通过translateZ对其位置进行错开，不能有相交
+         */
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="father">
+        <div class="on1"> 黑马程序员</div>
+        <div class="on2">
+           我在这里等你
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

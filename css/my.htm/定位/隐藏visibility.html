@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐藏</title>
+    <!-- 
+    visibility:visible 元素可见
+    visibility:hidden 元素不可见
+    和display最大区别是隐藏元素不释放占有的位置
+    -->
+
+    <style>
+    .one{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="one"></div>
+    <button class="a">隐藏</button>
+    <button class="b">显示</button>
+    <script>
+const div=document.querySelector(`.one`);
+const b1=document.querySelector(`.a`)
+const b2=document.querySelector(`.b`)
+
+b1.addEventListener(`click`,function(){
+    div.style.visibility=`hidden`
+})
+// 隐藏后 原来占用的位置要进行释放出来，不保留，这个很重要
+b2.addEventListener(`click`,function(){
+   div.style.visibility='visible'
+})
+
+    </script>
+</body>
+</html>

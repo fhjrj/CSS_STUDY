@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+            width: 600px;
+            height: 400px;
+            background-color: pink;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*  */
+        }
+/* flex布局排列中默认子元素是不换行的，当子盒子排列超出原来父盒子和宽度时，其缩小子元素的大小，强制塞进父盒子内，排列到一排。注意父盒子未撑大 但是子元素变小
+  解决方式 指定可以换行 flex-wrap: wrap; 默认是no-wrap 不换行
+*/
+        div span{
+            width: 150px;
+            height: 100px;
+            background-color: purple;
+            color:#fff;
+            margin:10px
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+    </div>
+</body>
+</html>

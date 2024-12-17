@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.hh{
+    perspective: 200px; 
+}
+
+        .box{
+            position: relative;
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+            transition: all 2s;
+            transform-style: preserve-3d;/*保持.box div:last-child的3D旋转效果*/
+            /* 开启子盒子的立体空间环境 保持三D立体效果 这个只能是写给父级元素的，这个注意。 */
+        }
+
+        .box div{
+            position: absolute;
+            top:0px;
+            left:0px;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+        }
+
+        .box div:last-child{
+            background-color: palegoldenrod;
+            transform: rotateX(60deg);
+        }
+
+        .box:hover{
+            transform: rotateY(-60deg);
+        }
+
+
+        /* 上面注意几点 1.perspective3D透视可以传递给子代，这样如果一个父亲的子孙代有很多3D转换元素，只需要给最顶级父亲添加即可(如上给hh添加)，但是其添加在body上不会有效
+        2. transform-style是保持子元素的3D空间环境，使得子元素的3D效果在父元素的3D变换下还保持不变。transform-style没有继承关系，如果子孙孩子都有3D效果，则需要给其对应的
+        父亲标题添加
+           
+        */
+        
+
+        
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="hh">
+    <div class="box">
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+</body>
+</html>

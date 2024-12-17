@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五彩缤纷</title>
+    <style>
+      
+
+        .nav a{
+            display:inline-block;
+            width: 120px;
+            height: 58px;
+            background-color: pink;
+            line-height: 58px;
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .nav .bg1 {
+            background: url(../tupian/bg1.png) no-repeat;
+        }/*并集选择器*/
+        .nav .bg1:hover {
+            background: url(../tupian/bg11.png) no-repeat;
+        }
+        .nav .bg2 {
+            background: url(../tupian/bg2.png) no-repeat;
+        }
+        .nav .bg2:hover {
+            background: url(../tupian/bg22.png) no-repeat;
+        }
+
+        .nav .bg3 {
+            background: url(../tupian/bg3.jpg) no-repeat;
+        }
+        .nav .bg3:hover {
+            background: url(../tupian/bg3.png) no-repeat;
+        }
+
+        .nav .bg4 {
+            background: url(../tupian/bg4.png) no-repeat;
+        }
+        .nav .bg4:hover {
+            background: url(../tupian/bg5.png) no-repeat;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#" class="bg1">五彩导航</a>
+        <a href="#" class="bg2">五彩导航</a>
+        <a href="#" class="bg3">五彩导航</a>
+        <a href="#" class="bg4">五彩导航</a>
+    </div>
+</body>
+</html>
+
+<!-- 
+demo回忆： 后代选择器 这个很重要 如上图 div是父类，其选择器为nav 
+nav的子类选择器是a 所以自然的在div标签中的a标签就会继承属性 
+-->

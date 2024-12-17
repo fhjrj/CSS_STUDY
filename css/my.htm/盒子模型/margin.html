@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>margin</title>
+    <style>
+         div {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            box-shadow: inset;
+            position: relative;
+         }
+
+         .one {
+            margin-bottom: 20px;
+            /* margin是外间距 控制盒子与盒子之间的距离 也有上下左右 
+            复合写法和padding一样
+            */
+         }
+
+         /* 外边距的作用可以使盒子在中间
+            但是必须满足条件 指定了宽度
+            指定左右外边距为auto
+            
+         */
+
+         .two {
+                width: 900px; 
+               height: 200px;
+               background-color: blueviolet;
+               margin: 0 auto;
+               /* 复合写法不要打, 空格隔开 */
+               text-align: center;
+               line-height: 200px;
+               
+         }
+
+         .two span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: wheat;
+           
+           
+            
+         }
+
+         /*
+           行内/行内块元素居中对齐 只需要让其父级元素有text-aline:center即可
+           居中 父级line-height即可 这只能让文本居中 不能让行内块元素居中
+         */
+    </style>
+</head>
+<body>
+    <!--
+    margin 盒子的外边距控制盒子与盒子的距离
+      -->
+    <div class="one">1</div>
+    <div>2</div>
+    <!-- 虽然div是块元素 但是其也是独占一行的 这个注意，两个div标签不会在同一行 除非设置inline-block -->
+     <div class="two"><span>666</span></div>
+
+    
+</body>
+</html>

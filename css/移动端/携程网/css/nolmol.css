@@ -1,0 +1,295 @@
+ body{
+    max-width: 540px;
+    min-width: 320px;
+    margin: 0 auto;
+    color:#000;
+    background:#f2f2f2;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+    font:normal 14px/1.5 Tahoma,"Lucida Grande";
+ }
+
+a{
+    text-decoration: none;
+}
+
+*{
+   margin: 0px;
+   padding: 0px;
+}
+
+  div{
+    box-sizing: border-box;
+  }
+
+
+ .search-index{
+    /* 固定定位和父级没关系 它以屏幕为主 所以body的最长最短高度不会影响它 必须重新再限定一次
+      注意下面的定位都是和屏幕固定的
+    */
+    position: fixed;
+    top:0px;
+    width: 100%;
+    height: 44px;
+    min-width: 320px;
+    max-width: 540px;
+    left:50%;
+    transform:translate(-50%,0px);
+    display: flex;
+    overflow: hidden;
+ }
+
+.search{
+    font-size: 12px;
+    height: 26px;
+    color:#666;
+    line-height: 24px;
+    flex:1;
+    border: 1px solid #ccc;
+    /* 注意这里 .search未设置宽度 flex:1 就是把父盒子剩余宽度都进行占有 */
+    margin: 7px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px black;
+    /* 参数三 模糊度 参数四阴影大小 */
+}
+
+.search::before{
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background: url(../images/sprite.png) no-repeat -59px -279px;
+    background-size: 104px auto;
+    vertical-align: middle;
+    margin: 7px 0px 8px 5px;
+}
+
+ .user{
+    width: 44px;
+    height: 44px;
+    font-size:12px;
+    text-align: center;
+    color:#fff
+ }
+
+ .user::before{
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background: url(../images/sprite.png) no-repeat -59px -194px;
+    background-size: 104px auto; 
+    margin: 3px auto 0;
+    /* 必须先制定背景图 然后才是缩放图片 */
+    /* 注意这里是对伪元素+的 margin:0 auto 使得伪元素进行居中对齐父元素    
+    */
+ }
+
+.fous{
+   /* 之所以加padding是因为 上面的收缩框是固定定位 浮动起来了 而图片在DIV中。标准流会往上进行移动 所以给padding将图片挤开 不要忘了浮动会影响后面的标准流 */
+   padding-top: 44px;
+   text-align: center;
+
+}
+
+ ul li{
+   list-style: none;
+ }
+
+ .fous img{
+   width: 80%;
+ }
+
+ .local-nav ul{
+   display: flex;
+   height: 64px;
+   background-color: #fff;
+   border-radius: 8px;
+   margin: 3px 4px;
+ }
+ /* 注意这里是给ul设置弹性盒子 给.local-nav设置弹性盒子 li不会被平分 这个小点记住 */
+
+ .local-nav ul li{
+   flex:1;
+ }
+
+ .local-nav a{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   font-size:12px;
+   color:coral
+   /* a标签中的两个span垂直排列然后居中对齐 */
+   /* 主轴默认是X轴 进行弹性布局 两个span水平排列 所以将主轴变为Y轴垂直排列 这时侧轴是X轴 对侧轴进行居中对齐 */
+ }
+
+ 
+
+ .local-nav li [class^="local-nav-icon"]{
+   width: 32px;
+   height: 32px;
+   margin-top: 8px;
+   background: url(../images/localnav_bg.png) no-repeat 0 0;
+   background-size: 32px auto;
+ }
+
+ .local-nav  li .local-nav-icon-icon2{
+   background-position: 0 -32px;
+ }
+ .local-nav  li .local-nav-icon-icon3{
+   background-position: 0 -64px;
+ }
+ .local-nav  li .local-nav-icon-icon4{
+   background-position: 0 -96px;
+ }
+ .local-nav  li .local-nav-icon-icon5{
+   background-position: 0 -128px;
+ }
+
+ nav{
+  margin: 0 4px 3px;
+  border-radius: 8px;
+  overflow: hidden;
+ }
+
+ nav .aa{
+  display: flex;
+  height: 88px;
+  background-color: pink;
+  flex-direction: row;
+  overflow: hidden;
+  /* 这里视角看上去有一点冒出来 */
+ }
+
+ nav .aa:nth-child(2){
+  margin: 3px 0px;
+ }
+
+ nav .aa .bb{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-right: 1px solid white;
+  /* 因为用了C3盒子模型 所以不会掉下去 */
+ }
+
+ .aa .bb a{
+  flex:1;
+  text-align: center;
+  line-height: 44px;
+  color:#fff;
+  font-size:14px;
+  text-shadow: 1px 1px rgba(0,0,0,0.2) ;
+ }
+
+  .bb a:first-child{
+  border-bottom: 1px solid white;
+ }
+
+ .aa div:nth-child(1) a{
+  border: 0px;
+  background-size:121px auto;
+ }
+
+
+ nav div[class="aa"]:nth-child(1){
+  background: -webkit-linear-gradient(left,#FA5A55,#FA994D);
+  /* 渐变颜色 */
+ }
+
+ nav div[class="aa"]:nth-child(2){
+  background: -webkit-linear-gradient(left,#4B90ED,#53BCED);
+ }
+
+ nav div[class="aa"]:nth-child(3){
+  background: -webkit-linear-gradient(left,rgb(20, 237, 49),#8ae77e);
+ }
+
+
+ 
+.tree{
+  display: flex;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 0 4px;
+  flex-direction: row;
+  /* 这里因为一排有5个 一共有10个 默认主轴排列不换行 所以要进行换行 每一个占有20% 这样就占有一行 */
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+.tree li {
+ flex:20%;
+}
+
+.tree a{
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+ color: black;
+}
+
+.aap{
+  width: 28px;
+  height: 28px;
+  background-color: pink;
+  margin-top: 10px;
+  background-size: 28px auto;
+}
+
+.ths{
+  border-top: 1px solid #bbb;
+  background-color: #fff;
+  margin: 4px;
+}
+
+.ths .hd{
+  position: relative;
+  height: 44px;
+  border-bottom: 1px solid #ccc;
+}
+
+.hd a{
+  position: absolute;
+  right: 5px;
+  top:10px;
+  background: -webkit-linear-gradient(left,rgb(231, 22, 57),pink);
+  border-radius: 15px;
+  padding: 3px 20px 3px 10px;
+}
+
+.ggg::after{
+  position: absolute;
+  top:9px;
+  right:8px;
+  width: 7px;
+  height: 7px;
+  content: "";
+  display: block;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(45deg);
+}
+/* 箭头使用伪元素进行制作 文字所占背景不够长时 可以使用padding进行挤开 这个注意 */
+
+.row {
+  display:flex;
+}
+
+.row a{
+  flex:1;
+  display: flex;
+  border-bottom:  1px solid #ccc;
+  flex-direction: row;
+  justify-content: center;
+}
+/* 这里是对a设置宽度 然后图片进行扩充 这样即可 */
+
+.row a:nth-child(1){
+  border-right: 1px solid #ccc
+}
+
+.row a img{
+ width: 80%;
+}
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 清除浮动语法
+     选择器 {clear:属性值;} 
+     left 不允许左侧有浮动元素
+     right 不允许右侧有浮动元素
+     both 同时清除左右两侧浮动的影响 
+     开发中基本都用both
+     -->
+     <!-- 
+     额外标签法是在浮动元素末尾添加一个空的块标签，高度必须为0，进行闭合，将浮动锁在里面,进行隔离。
+     添加的添加里面写 ：选择器 {clear:both;}
+     注意额外标签必须是一个块级元素 
+     -->
+     <style>
+            .box {
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            float:right;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .footer {
+            background-color: black;
+            height: 200px;  
+        }
+
+        .clear {
+            height: 0px;
+            clear: both;
+        }
+
+        /* 额外标签法清除浮动 在最后一个浮动的元素后面再增加一个标签 进行隔开 */
+     </style>
+</head>
+<body>
+    <div class="box">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+        <div class="clear"></div>
+       <!-- 这里进行添加一个空的，没有高度块级元素进行隔离 -->
+    </div>
+    </div>
+    <div class="footer">
+</body>
+</html>

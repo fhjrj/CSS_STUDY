@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器叠加</title>
+</head>
+<style>
+/* 复合选择器的权重会叠加！！！ */
+li {
+        color:red
+    }
+/* li 0,0,0,1 */
+    ul li {
+        color: aqua;
+    }
+    /* li+ul  0,0,0,1+0,0,0,1=0,0,0,2 这里权重就叠加了 */
+
+    .nav li {
+        color:pink
+    }
+    /* body标签类选择器，后代选择器li  权重是0,0,1,0+0,0,0,1=0,0,1,1 ，这时算总的权重，li的权重*/
+</style>
+<body class="nav">
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    </ul>
+</body>
+</html>

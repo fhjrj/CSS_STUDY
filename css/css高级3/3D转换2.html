@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+
+        @keyframes identifier {
+            0% {
+                transform: translate3d(100px,100px,-100px);
+            }
+
+            50% {
+                transform: translate3d(100px,100px,0px);
+            }
+
+            100%{
+                transform: translate3d(100px,100px,100px);
+            }
+        }
+
+
+        /* 旋转本质是旋转坐标系 这个记住 */
+
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            margin: 100px auto;
+            animation:identifier 3s linear 0s infinite forwards;
+        }
+
+        body{
+            perspective: 500px;
+        }
+     </style>
+</head>
+<body>
+     <div></div>
+</body>
+</html>

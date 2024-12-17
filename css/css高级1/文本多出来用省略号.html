@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--
+     省略分为单行省略和多行省略 
+     -->
+     <style>
+        .GG1{
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            margin: 100px auto;
+            /*  white-space: normal;  文字显示不开 自动换行 这时自动带有的*/
+            white-space: nowrap;
+            /*不允许换行 必须一行全部显示 */
+            /* 超出部分 隐藏 */
+            overflow:hidden;
+            text-overflow: ellipsis;
+            /* 超出的部分用...修饰 */
+            /* 上述三个代码就是单行文字进行操作 */
+
+        }
+
+        /*  
+     多行文本溢出显示省略号
+    */
+
+    .psp{
+            width: 150px;
+            height: 80px;
+            background-color: pink;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            display:-webkit-box;
+           /* 弹性伸缩盒子模型 */
+             line-clamp: 3;
+            -webkit-line-clamp: 3;
+           /*限制在一个块元素显示的最大文本行数
+           在最大文本行数的该行进行省略号
+           line-clamp和 -webkit-line-clamp都要有
+           */
+           -webkit-box-orient: vertical;
+           /* 设置或检索伸缩盒子对象的子元素的排列方式 */
+    }
+
+     </style>
+</head>
+<body>
+    <div class="GG1">
+        啥都不用说 此处省略一万行字
+    </div>
+    <br><br>
+    <div class="psp"> 啥都不用说 此处省略一万行字
+        啥都不用说 此处省略一万行字
+        啥都不用说 此处省略一万行字
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+      /* after伪类标签是额外标签法的升级版 下面写法就可以不手动添加块级元素 after所在选择器给父级标签 这时会自动添加一个高度为0的标签 减少标签的数量*/
+      .clearfix::after
+ {
+    content: "";
+    display: block;
+    /* 因为是额外标签法的升级版 需要块元素 所以进行标记是display:block */
+    height: 0px;
+    clear: both;
+ }
+ /* 熟记上面的写法 */
+
+     
+            .box {
+   
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            float:right;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .footer {
+            background-color: black;
+            height: 200px;  
+        }
+     
+     </style>
+</head>
+<body>
+    <!-- after添加在浮动元素的父级标签上，父级是标准流 -->
+    <div class="box clearfix">
+        
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+    <div class="footer">
+</body>
+</html>

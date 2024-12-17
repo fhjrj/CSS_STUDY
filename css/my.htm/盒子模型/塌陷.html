@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+       /* padding往内扩展，在设置了高和宽的前提下会撑大盒子
+       margin是往外扩展 设置了高和宽的前提下，若只看盒子不变，把margin算进去也是撑大
+       */
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            margin-top:50px;
+            /* border: 1px transparent solid;  */
+            /* padding-top:1px   */
+            overflow: hidden;
+        }
+/*对于两个嵌套的块元素， 父元素有上外边距，同时子元素也有上外边距(margin-top 只要固定了就会塌陷 即使是0px 比如下面例子), 此时父元素会塌陷较大的外边距值. 
+  注意一种特殊的情况 父亲盒子有magin:0 auto  这里变相的制定了margin-top:0px， 这时父子盒子都指定了margin-top 就会塌陷。 即使指定了外边距为0px
+  解决方法 给父元素一个边框 将其与子元素隔开  或者给父亲一个内边距(padding),但是这两种方法会将盒子变大
+  或者给父亲加上overflow:hidden
+*/
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            margin-top: 80px;
+
+        }
+
+        /* 清除内外边距 */
+        /* 有些标签会自带内外边距，但不是我们想要的，做法是全部清除内外边距 用*通配符 */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* 这样就清除内外边距 这也是CSS的第一行代码 */
+        /* 行内元素比较特殊 尽量只设置左右的内外边距 行内元素没有高和宽的性质 */
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <br><br><br>
+
+<!-- 父亲的宽度 儿子标签会继承（标签的嵌套 不会后代迭代器） -->
+     
+    <ul>
+        <li>aa</li>
+    </ul>
+</body>
+</html>

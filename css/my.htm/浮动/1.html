@@ -1,0 +1,43 @@
+<!-- 
+标准流是竖着排列的，但是横着排列很难设置，比如块元素一行放好几个，所以需要浮动操作。 
+-->
+
+<!-- 
+浮动看是左浮动还是右浮动，然后按照方向移动 直到靠近边缘或者另一个浮动
+所有浮动都是贴着浮动连在一起的
+-->
+
+<!-- 
+关键字float 
+left 左浮动 right 右浮动 none 不浮动
+浮动使用后有行内块元素特性
+-->
+<!-- 浮动的盒子自动化检测宽度 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1 {
+            float: left;
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+
+        .div2 {
+            float: right;
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">白虎</div>
+    <div class="div2">青龙<h1>ee</h1></div>
+    <!-- 标签继承浮动 父子标签 -->
+</body>
+</html>

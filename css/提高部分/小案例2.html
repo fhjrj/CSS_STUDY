@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>土豆</title>
+    <style>
+   div{
+    margin: 50px auto;
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    position: relative;
+   }
+
+   div img{
+    width: 100%;
+    height: 100%;
+   }
+/* 这个还是放在前面 放在前面是因为后面来的会被覆盖*/
+   div::before{
+    display: none;
+    position: absolute;
+    content: "";
+    background-color: rgba(0, 0, 0, 0.564);
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+   }
+
+   div:hover::before{
+        display: block;
+   }
+   /* 记住这个写法 经过时让伪元素显示出来 */
+    </style>
+</head>
+<body>
+    <div>
+  <img src="../tupian/学成网首页.jpg" alt="">
+    </div>
+</body>
+</html>

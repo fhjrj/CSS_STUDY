@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        动画相比于过渡可以实现更多的变化，更多控制和连续自动播放等
+        */
+
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 
+            调用动画
+            */
+
+            /* 指定动画名称 */
+            animation-name:identifier;
+            animation-duration: 2s;
+            /* 指定动画的时间 */
+        }
+
+        /* CSS中 动画是关键字0@keyframes */
+         
+
+@keyframes identifier {
+    0%{
+        transform: translateX(0px);
+    }
+
+    100%{
+        transform: translateX(1000px);
+    }
+}
+
+/* 设置动画 0%是开始的状态 100%是结束的状态 */
+
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

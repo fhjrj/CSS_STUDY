@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="idth=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .gg{
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            transform: translateX(50%);
+            /* translate参数为百分号 这个百分号参考的是自己的高度或者宽度 上面就是50px */
+         }
+
+
+         .qq{
+            position: relative;
+            height: 500px;
+            width: 500px;
+            background-color: aqua;
+         }
+
+         .ss{
+            position: absolute;
+            /* 这个居中对齐 都是50% */
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            height: 200px;
+            width: 200px;
+            background-color: burlywood;
+         }
+    </style>
+</head>
+<body>
+    <div class="gg">
+    </div>
+    <br><br><br>
+    <div class="qq">
+        <p class="ss"></p>
+    </div>
+</body>
+</html>

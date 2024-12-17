@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        浮动的第一大特性：浮动元素会脱离标准流  即1.添加浮动后，原来标签属性的排列方式消失，按照浮动指定方式 2.浮动的盒子不再保留原先的位置 可以实现标签的叠加(相当于原来标签飞起来了)
+        第二大特性：多个元素都设置了浮动，它们会按照属性值一行被显示并且顶端对齐排列，不会有缝隙 如果父级盒子装不下浮动盒子，多出来的盒子则会另起一行
+        第三大特性：任何元素都可以设置浮动，添加浮动后，元素具有行内块属性，不用再转换为inline-block。
+        块元素没设置宽度，默认宽度和父级一样宽，设置浮动后，它大小根据内容来确定
+        */
+        #div1 {
+            width: 200px;
+            height: 300px;
+            background-color: brown;
+            float: left;    
+        }
+
+        #div2
+        {
+            width: 400px;
+            height: 800px;
+            background-color: yellowgreen;
+          
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <!-- 这样 div1在div2上面
+    如果反过来则不行了 
+    <div id="div2"></div>
+    <div id="div1"></div>
+    div2是标准流 ，其是块元素，会独占一行，这时div1即使添加了浮动，只能在其下面。
+    所以想要实现标签重叠 最前面的一定是浮动，只会压住浮动后面的标准流。
+    -->
+
+</body>
+</html>

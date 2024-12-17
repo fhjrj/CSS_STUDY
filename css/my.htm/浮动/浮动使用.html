@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        浮动的使用标准：
+        为了约束浮动元素的位置，经常搭配标准流父级使用，先让标准流父级元素排列再上下位置，之久内部子元素采取浮动排列左右位置，网页布局的第一准则。
+        */
+
+        .box {
+            height: 460px;
+            width: 1200px;
+            margin: 0 auto;
+            background-color: gray;
+
+        }
+
+        .box .left {
+          padding:40px 0;
+          float: left;
+          height: 380px;
+          width:230px ;
+          background-color: aquamarine;
+        }
+
+        .box .right {
+float:right;
+height: 460px;
+width: 970px;
+background-color: bisque;
+        }
+
+        .box .left p{
+            padding-left: 20px;
+            height: 48px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+ <div class="left">
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+  <p>6</p>
+ </div>
+ <div class="right"></div>
+    </div>
+</body>
+</html>
+
+<!--  div标签是大盒子 里面可以不在是div,可以是li标签 注意标签的提权 这个很重要 -->

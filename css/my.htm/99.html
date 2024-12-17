@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS背景</title>
+    <style>
+      /*背景颜色默认是无色的 transparent*/
+      div {
+        background-image: url(../../html/tupian/下载.jpg);
+        /* 给所在标签增加背景图片 */
+        /* 设置盒子高度 */
+        width: 800px;
+        height: 800px;
+         background-repeat: no-repeat; 
+        /* X轴平铺 */
+        /* 背景不仅可以插入图片，同时也可以插入颜色 */
+        background-color: blue;
+        /* background-position: center top; */
+        /* 方位名字不分左右 top只能是y轴 center可能是X轴中间，可能是Y周中间*/
+        background-position: center 20px;
+        /* 对于超大图片的摆放 一般是top center */
+        background-attachment: fixed;
+        
+      }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+    <p>66666666666666</p>
+</body>
+</html>
+
+<!-- 
+背景平铺，使得背景图片进行重复出现覆盖
+平铺分为直接平铺，X轴平铺，Y周平铺
+关键字 background_repeat
+-->
+
+<!-- 
+背景图片移动 
+background-position: x y 
+第一个是X轴坐标 第二个是Y轴坐标
+x/y取方位名词或者精确单位或者混合单位
+后两个单位一定第一个是X坐标，另一个是Y坐标
+-->
+
+
+
+<!-- 
+背景图像固定(背景附着)
+背景是随着页面滚动的还是随着图像固定的
+background-attachment: scroll | fixed 前者是滚动的，后者是固定的
+这里注意 不论是固定的 还是滚动的，只能在背景图片所在的盒子之内 超过盒子范围就看不见了
+-->
+

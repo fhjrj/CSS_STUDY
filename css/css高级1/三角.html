@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pp{
+            width: 0px;
+            height: 0px;
+            /* border: 10px pink solid;
+             */
+             border-left: 10px pink solid;
+             border-right: 10px green solid;
+             border-bottom: 10px black solid;
+             border-top: 10px yellowgreen solid;
+        }
+        /* 盒子的宽和高都是0 四个边框宽度一样 显示的就是四个三角形组合在一起的正方形 */
+
+        .GG{
+            width: 0px;
+            height: 0px;
+            /* border: 10px pink solid;
+             */
+             border-left: 100px transparent solid;
+             border-right: 100px transparent solid;
+             border-bottom: 100px transparent solid;
+             border-top: 100px yellowgreen solid
+        }
+        /* 想让其只出现一个三角行 其他三个边都透明即可 */
+
+        .ji{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        .ji span{
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        /* 必须为0 */
+        font-size:0px;
+        line-height: 0px;
+       border: 5px solid transparent;
+       border-bottom-color: yellowgreen;
+       /* 其他三条边必须透明 */
+       top:-10px;
+       /* 为什么是-10px?因为border宽为5px,其充当了正方形边的一半 正方形整个高是10PX 所以将正方形都移出就需要10px */
+       left:50px;
+       margin-left:-5px;
+        }
+   /* 想让其只出现一个三角行 其他三个边都透明即可 */
+
+        .spss{
+            width: 0px;
+            height: 0px;
+             /* border-left: 0px transparent solid;
+             border-right: 20px black solid;
+             border-bottom: 0px transparent solid;
+             border-top: 100px transparent solid */
+             /* 非等腰直角三角形 让左边，下边的宽度都为零且颜色透明 但是top,right不能为零,top变大就可以写出直角三角形 */
+
+             border-color: transparent black transparent transparent;
+             border-style: solid;
+             border-width: 100px 20px 0px 0px;
+             /* 合并写法 */
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <div class="pp"></div>
+    <br><br><br>
+    <div class="GG"></div>
+    <br><br><br>
+    <div class="ji">
+       <span>
+       </span>
+    </div>
+    <!-- 相当于小三角浮动到大三角 不用flot -->
+     <!-- 上面都是等腰直角三角形 -->
+      <br><br><br><br><br>
+      <div class="spss"></div>
+</body>
+</html>

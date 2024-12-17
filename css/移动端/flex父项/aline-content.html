@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* aline-content : 设置侧轴上子元素的排列方式 其不同于aline-intms 其可以设置多行子元素的排列方式，对于单行没用
+           这个换行的意思是子元素出现换行的情况下.
+
+           aline-content的性质和justify-content一样 不过多介绍 只注意一点space-around属性是以margin边距进行对齐 
+        */
+
+        div{
+            display: flex;
+            width: 800px;
+            height: 400px;
+            background-color: pink;
+            flex-wrap: wrap;
+            flex-direction: row;
+            /* align-content: flex-start; 沿侧轴紧贴一起 */
+            /* align-content: center; 所有盒子整体在侧轴居中对齐 多行 */
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+        }
+        /* 有了换行  所以侧轴上子元素可以使用 aline-content进行设置*/
+
+        div span{
+            width: 150px;
+            height: 100px;
+            background-color: aqua;
+            color:#fff;
+            margin: 10px;;
+        }
+    </style>
+</head>
+<body>
+    <div><span>1i</span><span>2i</span><span>3i</span><span>4i</span><span>5i</span><span>6i</span></div>
+</body>
+</html>

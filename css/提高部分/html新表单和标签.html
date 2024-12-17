@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新特性</title>
+    <style>
+        header{
+            height: 100px;
+            width: 200px;
+            background-color: pink;
+            margin: 0 auto;
+            border-radius: 15px 15px 0 0;
+            /* 圆角 上右下左  顺时针*/
+        }
+        /* 头部标签 类块元素*/
+        nav{
+            height: 100px;
+            width: 100px;
+            background-color: wheat;
+            border-radius: 50px;
+           margin: 110px auto;
+        }
+        /* 导航栏标签  类块元素*/
+        /*
+        article 内容标签 类块元素
+        section 定义文档某个区域 类块元素
+        aside 侧边栏标签 类块元素
+        footer 尾部标签  类块元素
+         注意 一般上面标签用来划分区域 其他标间就在其上面进行
+所以设计网页布局可以不用再只使用div标签 还有上面标签提供选择
+上面是语义标签
+
+块元素标签不能再次放块元素标签。会被挤下去。但是语义标签虽然是独占一行。但是其能放入多个块元素标签。 比如section标签里放div标签.section标签不会将div标签挤下去
+
+
+*/
+
+section{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+button{
+    display:inline-block;
+    width: 40px;
+    height: 20px;
+
+}
+
+    </style>
+</head>
+<body>
+    <header>111</header>
+    <nav>222</nav>
+    <section>区域标签</section>
+    <br><br><br>
+    <!-- 验证的时候必须来增加from表单域
+    下面是input的类型 不是属性 这个注意
+    -->
+    <form action="">
+        <ul>
+            <li>邮箱: <input type="email" /></li>
+            <li>网址: <input type="url" /></li>
+            <li>日期: <input type="date" /></li>
+            <li>时间: <input type="time" /></li>
+            <li>数量: <input type="number" /></li>
+            <li>手机号码: <input type="tel" /></li>
+            <li>搜索: <input type="search" /></li>
+            <li>颜色: <input type="color" /></li>
+            <!-- 当我们点击提交按钮就可以验证表单了 -->
+            <li> <input type="submit" value="提交"></li>
+            <!-- 这个的submit属性就是将表单变为按钮 -->
+        </ul>
+        <button>提交</button>
+        <!--
+        button的按钮没有value属性 
+         -->
+    </form>
+    <br>
+    <article>11</article>
+    <article>22</article>
+    <script>
+        const button=document.querySelector(`button`)
+        button.disabled=false;
+         //button.value='123'  这里面不能设置其文本
+         button.innerHTML='<strong>123</strong>'
+        //  innerHTML可以设置
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        section{
+            display: flex;
+            width: 60%;
+            height: 150px;
+            background-color: blueviolet;
+            margin: 0 auto;
+            flex-direction: row;
+        }
+
+        section div:nth-child(1){
+            width: 100px;
+            height: 150px;
+            background-color: red;
+        }
+
+        section div:nth-child(2){
+            flex:1;
+            background-color: blue;
+        }
+        /* 这里flex=1的意思是 1 3号孩子占有了最左和最右 ，整个父盒子的剩余空间还有中间 flex=1就是将剩余空间分为1分（全部），给该子元素全部占有 */
+        /* 注意是父盒子必须写display:flex flex=i这个是添加在子元素中 */
+
+        section div:nth-child(3){
+            width: 100px;
+            height: 150px;
+            background-color: aqua;
+        }
+         
+
+        p{
+            display: flex;
+            width: 60%;
+            height: 150px;
+            background-color:pink;
+            margin: 100px auto;
+            flex-direction: row;
+        }
+
+        p span{
+            flex:1;
+        }
+  /* 这里是p中的三个孩子 ，没有设置宽度，所以剩余空间就相当于是整个p,每个孩子独占总空间的1份 所以3个孩子就独占了三分 将其三等分了 */
+        p span:nth-child(2){
+            flex:2;
+            background-color: blueviolet;
+        }
+        /* 这里盒子相当于被分为1+2+1 分数 注意 中间盒子要大点*/
+
+      
+    </style>
+</head>
+<body>
+    <section>
+        <div></div>
+        <div></div>
+        <div></div>
+    </section>
+
+    <p>
+        <span></span><span></span><span></span>
+    </p>
+</body>
+</html>

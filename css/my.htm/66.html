@@ -1,0 +1,38 @@
+<!-- 
+ 文字修饰线 关键字    text-decoration:
+ 属性  none 文字没有属性
+      underline 增加下划线
+-->
+ 
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+         <style>
+          a {
+            text-decoration: none;
+          }
+
+          div {
+            text-decoration: underline;
+          }
+
+          p {
+            text-decoration: line-through;
+          }
+
+          span {
+            text-decoration: overline;
+            /* span标签 对一行的部分文字进行组合 使span双标签包裹的文字有其他效果 */
+          }
+         </style>
+    </head>
+    <body>
+        <a href="#">标签去掉下划线</a>
+        <div>div标签增加下划线</div>
+        <p>p标签增加删除线</p>
+        <p><span>span标签添加顶个线</span>66666老铁</p>
+    </body>
+    </html>

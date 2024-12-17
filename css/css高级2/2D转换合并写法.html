@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+
+/* 2D转换的合并写法 */
+
+div{
+    height: 200px;
+    width: 200px;
+    background-color: pink;
+    transition: all 0.4s;
+    /* 当同时有位移和其他属性的时候 注意先写位移属性 将其放在zuiqianmian */
+}
+
+div:hover{
+    transform: translate(50px,50px) rotate(90deg);
+}
+
+/* transfrom 中的旋转，缩放和移动的参数是逗号隔开 设置旋转的缩放中心transform-origin则是用空格隔开 */
+
+     </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

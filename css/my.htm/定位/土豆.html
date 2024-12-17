@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tudou{
+            position: relative;
+            width: 444px;
+            height: 320px;
+            background-color: pink;
+            margin: 30px auto;
+        }
+
+        .tudou img{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .mask{
+            display: none;
+            /* 隐藏 看不到浮动 */
+            position: absolute;
+            left: 0px;
+            top:0px;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.342);
+            /* 即使浮动起来 因为是半透明的 所以会显示被压住的图片 */
+        }
+
+        /* 鼠标经过父级标签 使得儿子标签进行显示出来 注意这种写法*/
+        .tudou:hover .mask{
+            display:  block;
+            /* 这里的block不是块级元素 而是显示出来 */
+        }
+    </style>
+</head>
+<body>
+    <div class="tudou">
+        <div class="mask"></div>
+        <!-- 绝对定位 所有用绝对定位消除浮动  -->
+ <img src="./图片/图片1.png" alt="">
+ <!-- 这时的mask是浮动起来的，但是被隐藏了 压着img -->
+    </div>
+</body>
+</html>

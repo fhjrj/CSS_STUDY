@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* height: 100px; */
+            border: 2px red solid;
+        }
+
+        /* img{
+            /* height: 100%; */
+        
+        .pps{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div>
+ <img src="../../html/tupian/800.jpg" alt="">112211
+    </div>
+    <!-- 如上的div未指定高度和宽度 div盒子被图片撑起来 这时下面还有一条空白,原因就是行内块元素与文字基线对齐 解决就是给图片+vertical-align 任意对齐都可以。
+                                                                                                                                或者给图片+block属性 -->
+    <br><br>
+    <div>
+        <img src="../../html/tupian/800.jpg" alt="" class="pps">112211
+           </div>
+</body>
+</html>

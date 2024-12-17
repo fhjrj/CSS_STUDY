@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人注册</title>
+    <link rel="style icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+<!-- 学习注册页面的制作 是ul li这样包含制作的 -->
+<body>
+    <div class="w">
+        <header>
+          <div class="logo">
+            <a href="品优购.html"><img src="./images/logo.png" alt=""></a>
+          </div>
+        </header>
+        <div class="regist">
+            <h3>注册新用户
+                <div class="login">我有账号,去<a href="./品优购.html">登录</a></div>
+            </h3>
+        
+            <div class="reg_from"> 
+             <form action="">
+              <ul>
+                <li>
+                   <label for="">手机号：</label><input type="text" class="inp"><span class="error"> <i class="i_error"></i>手机号码格式不正确,请重新输入</span>
+                </li>
+
+                <li>
+                    <label for="">短信验证码：</label><input type="text" class="inp"><span class="success"> <i class="success_inoc"></i>短信验证码正确</span>
+                 </li>
+
+                 <li>
+                    <label for="">登录密码：</label><input type="password" class="inp"><span class="error"> <i class="i_error"></i>登录密码不正确,请重新输入</span>
+                 </li>
+
+                 <li class="safe">安全程度 <em class="a1">弱</em><em class="a2">中</em><em class="a3">强</em></li>
+
+                 <li>
+                    <label for="">确认密码：</label><input type="password" class="inp"><span class="error"> <i class="i_error"></i>密码不正确,请重新输入</span>
+                 </li>
+
+                 <li class="agree"><input type="checkbox" name="" id="ggg">同意协议并注册<a href="$">《知晓用户协议》</a></li>
+                 <!-- checkbox是进行勾画确认的类型 要输入多行文字是textarea属性 -->
+                 <li> <input type="submit" value="注册提交"></li>
+              </ul>
+             </form>
+            </div>
+        </div>
+   <!-- 不要忘了 表单都放在表单页面中 -->
+
+
+        <footer>
+          <div class="mod_cpp">
+            <div class="links1">
+              <a href="#">关于我们</a>  |  <a href="#">联系我们</a>  |  <a href="#">联系客服</a>  |  <a href="#">商家入驻</a>  |  <a href="#">营销中心</a>  |  
+              <a href="#">手机品优购</a>  |  <a href="#">友情链接</a>  |  <a href="#">销售联盟</a>  |  <a href="#">品优购社区</a>  |  <a href="#">品优购公益</a>  |  <a href="#">English Site</a>  |  <a href="#">Contact U</a>
+            </div>
+            <div class="links2">
+              地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100 邮箱: zhanghj+itcast.cn 
+              京ICP备08001421号京公网安备110108007702
+            </div>
+           </div>
+
+        </footer>
+
+    </div>
+</body>
+</html>

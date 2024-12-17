@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+       .nav {
+        border: solid rgb(175, 169, 169) 1px;
+        border-collapse: collapse;
+        width: 248px;
+        height: 163px;
+        margin: 0 auto;
+
+       }
+
+       .nav h3{
+        height: 32px;
+        border-bottom: 1px dotted #ccc;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 32px;
+        /* margin-left:15px;不能margin 因为虚线会跑  */
+        padding-left: 15px;
+       }
+
+       .nav ul li a{
+        font-size: 12px;
+        text-decoration: none;
+        color: #666;
+       }
+
+       .nav ul li a:hover{
+         text-decoration: underline;
+       }
+       li {
+        list-style: none;
+        /* 去掉li前面的小圆点或者数字 */
+        /* 所有小li都去掉 */
+       }
+
+       .nav ul li{
+        height: 23px;
+        line-height: 23px;
+        padding-left: 20px;
+        /* li没有设置宽度 所以不会撑开
+         未设置li的宽度 宽度继承div的宽度248px padding是从div的宽度往两边挤
+         若设置了宽度为248px( width: 248px;) 再padding就是从两外往外撑开了 div的宽度不变 但是li有一部分跑到外面去了 长度为248+20=268px
+          小细节记住 不要撑开盒子的高和宽
+        */
+        
+       }
+
+       .nav ul{
+         margin-top: 7px;
+       }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h3>品优购买报</h3>
+         <ul>
+          <li><a href="#">@特惠@ 碧云套</a></li>
+          <li><a href="#">@特惠@ 充气娃娃</a></li>
+          <li><a href="#">@特惠@ 台北娜娜倒模</a></li>
+          <li><a href="#">@特惠@ 原味</a></li>
+          <li><a href="#">@特惠@ 飞机杯</a></li>
+         </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes identifier {
+            0% {
+                transform: translateX(0px);
+            }
+
+            100%{
+                transform: translateX(500px);
+            }
+        }
+
+
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            /* animation-name:identifier ; */
+            /* animation-duration: 5s; */
+            /* 时间运动曲线 回忆过渡也有这个性质 */
+            /* animation-timing-function: ease; */
+            /* 动画何时开始 下面就是1S 默认是0S */
+            /* animation-delay: 1s; */
+            /* 动画执行多少次 即重复次数 默认1次   infinite是无数次 */
+            /* animation-iteration-count: 1; */
+            /* 是否反方向播放  默认是normal即不会逆向播放 alternate可以逆向播放*/
+            /* animation-direction: alternate; */
+/* 动画结束时 保持结果状态是forwards 回到起始状态是backwards */
+            /* animation-fill-mode: backwards; */
+
+            /* 动画的综合写法 */
+            animation:identifier 5s ease 1s infinite alternate forwards;
+            /* 运动一次不要和alternate一起使用 */
+        }
+
+        div:hover{
+            /*这个是使动画停止 这里是当鼠标经过时 动画停止 */
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

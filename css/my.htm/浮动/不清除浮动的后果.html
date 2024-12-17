@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 实际开发中 不方便给父盒子高度，因为不确定里面元素有多少，但里面元素给了浮动后，父盒子高度又是零，不是我们想要的。所有要清除浮动（父盒子有高度不用清除浮动）
+     父盒子不会随着浮动子盒子而撑大
+     -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            float:right;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* 没给父盒子高度 父盒子被子盒子撑开 */
+    </style>
+</head>
+<body>
+ <div class="box">
+   <div class="damao"></div>
+   <div class="ermao"></div>
+   <!-- damao ermao加了浮动，由于浮动不占用标准流位置 这时父盒子高度为0 -->
+ </div>
+   
+</body>
+</html>

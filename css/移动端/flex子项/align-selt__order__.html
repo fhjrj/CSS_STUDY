@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* align-self: 属性允许单个项目有其他项目不一样的对齐方式，可覆盖aline-items属性 */
+        /* 即控制子项自己在侧轴上的排列方式  注意是给子元素+ 而且是控制的是侧轴 */
+div{
+    display: flex;
+    width: 80%;
+    height: 300px;
+    background-color: brown;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* align-items: flex-end; 
+      让三个子盒子在盒子底部
+      但我们只想让三号盒子下去
+    */
+
+}
+
+div span{
+    width: 150px;
+    height: 100px;
+    background-color: purple;
+    margin-right: 5px;
+}
+
+div span:nth-child(2){
+    order:-1 ;
+    /* order是控制同一行的排列顺序 数值越小 越往前 默认是零 
+     这里就是-1<0  二号元素排在一号元素前面 。不同于z-index，它是叠起来
+    */
+}
+
+div span:last-child{
+    align-self: flex-end;
+}
+
+    </style>
+</head>
+<body>
+    <div><span>1</span><span>2</span><span>3</span></div>
+</body>
+</html>

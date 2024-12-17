@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+        设置旋转中心点
+          transform-origin:x y;
+          还是相对于自身元素。
+          可以是像素 可以是百分比 可以是方位名词
+        */
+        div{
+          height: 100px;
+          width: 200px;
+          background-color: black;
+          margin: 0px auto;
+          transform-origin: 0 100px;
+          /* 旋转中心就是左下角 
+          
+            transform-origin: left bottom; 也是左下角
+          ---------------------------->X轴
+          |
+          |
+          |
+          |
+          |
+          |
+          |
+          Y
+          轴
+          
+          
+          */
+          transition: all 1s;
+        }
+
+        div:hover{
+            transform: rotate(90deg);
+        }
+        p{
+            margin: 0 auto;
+            height: 40px;
+            width: 40px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p></p>
+</body>
+</html>

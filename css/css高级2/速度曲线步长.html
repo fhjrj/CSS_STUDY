@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            overflow: hidden;
+            height: 30px;
+            font-size:20px;
+            width:0px;
+            /* 文字强制一行显示 */
+            white-space: nowrap;
+            background-color: pink;
+            animation:id 2s steps(10) 1 normal forwards ;
+            /* 速度曲线步长 即steps 分几步来完成动画 上面就是动画分为了20步 */
+        }
+
+        @keyframes id {
+            0% {
+                width: 0px;
+            }
+
+            100% {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>潘泽润最喜欢玩原神了</div>
+</body>
+</html>

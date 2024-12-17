@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: pink;
+            animation-name:ide;
+            animation-duration: 10s;
+        }
+
+/* 除了0%和100%  还可以是from to */
+        /* @keyframes ide{
+            from {
+              
+                 transform: translate(0,0);
+                 transform: scale(0deg);
+            }
+
+            to {
+               
+                transform: translate(200px,200px);
+                transform: scale(90deg);
+            }
+        } */
+
+
+        /* 动画序列 将0%~100%分为多个区域 进行一个动画的多个阶段 */
+        @keyframes ide {
+            0% {
+                transform: translate(0,0) scale(0);
+            }
+
+            25% {
+                transform: translate(500px,0) scale(90deg);
+            }
+
+            50% {
+                transform: translate(500px,500px) scale(180deg);
+            }
+
+            75% {
+                transform: translate(0px,500px);
+            }
+
+            100%{
+                transform: translate(0,0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

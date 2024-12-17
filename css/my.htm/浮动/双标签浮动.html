@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix::before,
+        .clearfix::after {
+            content: "";
+            display: table;
+            /* 双标签写法就是table */
+            height: 0px;
+            visibility:hidden;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+        /* 上述写法还是添加在浮动元素的父级标签上(父标签未设置高度) 与after区别不同的是 这时还添加了个隔离标签before 前后一个  */
+        /* 牢记单标签和双标签的写法 */
+
+        .box {
+   
+   width: 800px;
+   border: 1px solid blue;
+   margin: 0 auto;
+}
+
+.damao {
+   float: left;
+   width: 300px;
+   height: 200px;
+   background-color: purple;
+}
+
+.ermao {
+   float:right;
+   width: 200px;
+   height: 200px;
+   background-color: pink;
+}
+.footer {
+   background-color: black;
+   height: 200px;  
+}
+    </style>
+</head>
+<body>
+    <div class="box clearfix">
+        
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+    <div class="footer w">
+</body>
+</html>

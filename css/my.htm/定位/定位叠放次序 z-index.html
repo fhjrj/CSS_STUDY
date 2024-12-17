@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 位置叠放的次序 可能会出现重叠的情况 可以使用z-index来增加Z轴属性来控制重叠先后 
+        z-index:数值越大 盒子越靠上     
+        z-index属性必须作用在position属性上 必须要有position属性
+        */
+
+        .box{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left:0px;
+            right:0px;
+        }
+
+        .one{
+            background-color: red;
+            z-index: 2;
+            left: 40px;
+            top: 50px;
+        }
+
+        .second{
+            background-color: blue;
+            z-index: 1;
+            left: 30px;
+            top: 20px;
+        }
+
+        .three{
+            background-color: aquamarine;
+            z-index: 3;
+            left: 30px;
+            top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box one">熊大</div>
+    <div class="box second">熊二</div>
+    <div class="three box">光头强</div>
+</body>
+</html>

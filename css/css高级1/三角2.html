@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .price{
+            width: 160px;
+            height: 24px;
+            border: 1px solid red;
+            margin: 0 auto;
+            line-height: 24px;
+        }
+
+        .miaosha{
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            text-align: center;
+            color:#fff;
+            font-weight: 700;
+            position: relative;
+            /* 这里之所以＋定位是因为让儿子的三角将父亲盒子压住 子绝父相 */
+        }
+
+        .miaosha i{
+            width: 0px;
+            height: 0px;
+            /* float: right; */
+            border-color: transparent #fff transparent transparent;
+            border-width:24px 12px 0px 0px;
+            border-style: solid;
+            position: absolute;
+            /* 儿子也浮动起来 这样就可以压住元素了 */
+            right: 0px; 
+            top:0px;
+            /* 这里是想让儿子元素紧贴父亲元素的右边 */
+        }
+
+        .miaosha2{
+            float:right;
+            margin-right:14px;
+            color:gray;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+       <div class="price">
+          <span class="miaosha">$9999
+            <i></i>
+          </span>
+          <span class="miaosha2">$2222</span>
+       </div>
+</body>
+</html>

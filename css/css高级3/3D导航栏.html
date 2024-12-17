@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            perspective: 200px;
+        }
+
+        ul{
+            margin: 100px;
+        }
+
+        ul li{
+            list-style: none;
+            width: 120px;
+            height: 35px;
+        }
+
+        .box{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: all 1s;
+        }
+
+        .box .m1,.m2{
+            position: absolute;
+            top:0px;
+            left:0px;
+            width: 100%;
+            height: 100%;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        .m1{
+            background-color: pink;
+            transform: translateZ(17.5px);
+           
+        }
+
+        .m2{
+            background-color: darkmagenta;
+           transform: translateY(17.5px)  rotateX(-90deg) ;
+        }
+/* 
+首先注意 不论是2D转换还是3D转换 在默认情况下是以图片的中心进行旋转平移或者扩大的。
+上面的旋转案例是将两个盒子移动出中心点 m1(0,0,17.5)  两个都不在中心点 这个注意 translate()就相当于是移动出中心点
+*/
+        .box:hover{
+            transform: rotateX(90deg);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="m1">潘泽润</div>
+                <div class="m2">爱撸管</div>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

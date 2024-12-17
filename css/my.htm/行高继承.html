@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高继承</title>
+</head>
+<style>
+    body {
+        color:pink;
+        font-size: 12px/1.5;/*body内子元素变为1.5倍*/
+    }
+
+    div{
+        /* 这里的1.5是继承父亲body行高的1.5倍 */
+        /* 这个 1.5是当前元素font-size的1.5倍 */
+        font-size: 14px;/*这时行高就是12*1.5=21*/
+    }
+</style>
+<body>
+    <div>
+        div标签
+    </div>
+    <ul>
+        <li>我没有指明文字大小</li>
+    </ul>
+    <!-- 未指定标签大小，其会继承父亲标签body的行高和大小，同理还是1.5倍 12*1.5。这里的继承是指定了继承方式的，一般未指定是继承父亲盒子的宽度。
+     块套块会继承 块里面的行内和行内块元素不会继承
+    -->
+</body>
+</html>

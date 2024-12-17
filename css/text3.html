@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .m1{
+        margin: 10px auto;
+        height: 100px;
+        width: 1200px;
+        background-color: blue;
+        position: relative;
+    }
+
+    .m2{
+        box-sizing: border-box;
+        display: inline-block;
+        height: 60px;
+        width: 1000px;
+        /* margin-top: 20px;
+        margin-left:100px; */
+        background-color: brown;
+        position: absolute;
+        top:20px;
+        left:100px;
+    }
+
+    .m1::before{
+        content: "1";
+        height: 30px;
+        width: 30px;
+        display: block;
+        background-color: black;
+    }
+    
+
+    .m1::after{
+        content: "1";
+        height: 30px;
+        width: 30px;
+        display: block;
+        background-color: black;
+    }
+
+    .m2::before{
+        content: "1";
+        height: 30px;
+        width: 30px;
+        display: block;
+        background-color: red;
+    }
+    
+    .m2::after{
+        content: "1";
+        height: 30px;
+        width: 30px;
+        display: block;
+        background-color: red;
+    }
+
+    .m3{
+        width: 20px;
+        height: 20px;
+        background-color: aqua;
+    }
+
+</style>
+</head>
+<body>
+    <div class="m1">
+        <!-- 子绝父相
+         给父亲添加伪元素不会被儿子隔离。因为儿子元素浮动起来了 
+        -->
+        <div class="m2">
+        <div class="m3"></div>
+        <!-- 这个还是独占一行 -->
+        </div>
+    </div>
+</body>
+</html>

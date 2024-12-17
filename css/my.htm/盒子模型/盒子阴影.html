@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒子阴影</title>
+    <style>
+        .divm {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            box-shadow: 10px 10px 10px 10px black;
+            /* 参数一 水平位置(x轴)的阴影位置 >0阴影位置往右 <0往左 */
+             /* 参数二 垂直位置(y轴)的阴影位置 >0阴影位置往上 <0往下 */
+              /* 参数三 模糊效果设置 就是阴影的模糊程度   值越大越模糊 模糊的范围也就越广*/
+               /* 参数四 阴影尺寸大小设置  值越大阴影尺寸越大*/
+               /* 参数五就是颜色设置 */
+               /* 盒子阴影不会占用位置 这个要注意！！！！ */
+        }
+
+        /*阴影效果可以增加伪类标签*/
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color:rgb(32, 159, 72);
+            margin: 100px auto;
+        }
+        .cp:hover {
+            box-shadow: 10px 10px 10px 10px black;
+        }
+
+        p {
+            text-shadow: 5px 5px 5px pink;
+            /* 文字引用的设置 相比较于盒子的阴影 少了阴影的大小这一个设置。其他和盒子阴影含义一样*/
+        }
+    </style>
+</head>
+<body>
+    <div class="divm"></div>
+    <br><br><br><br>
+    <div class="cp"></div>
+    <p>dwedwedwedwed</p>
+    <script>
+        const p=document.querySelector('div')
+        p.style.backgroundColor='red'
+     </script>
+</body>
+</html>

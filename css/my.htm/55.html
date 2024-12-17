@@ -1,0 +1,38 @@
+<!-- text-align 
+控制的是标签的水平方向的控制方式
+
+属性值
+left: 左对齐
+center:居中对其,调整的是内容的居中方式，不影响标签的位置
+right:右对齐
+
+想要让图片进行对齐居中，必须要包裹父级标签 使得父级标签对齐
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+           /* text-align: right; */
+           text-align: center;
+        }
+
+        div {
+            text-align: center;
+            /* 图片居中要使用父级标签，对父级标签+text-aline */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>文字测试</h1>
+    <div>
+        <img src="../../html/bcf62bbe48e0dcf04548be0e184ae01bbf7de927.jpg@1256w_926h_!web-article-pic.avif" alt="图片" width="200">
+    </div>
+</body>
+</html>

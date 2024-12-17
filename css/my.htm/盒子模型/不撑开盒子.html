@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 300px;
+            width:100px;
+            background-color: aqua;
+            /* 不要忘了继承的性质 如上 假如没有设置宽度 则会继承BODY的宽度
+            div本来就是独占一行的，独占一行不是继承 
+            */
+        }
+
+        div p {
+            padding: 30px; 
+            background-color: black;
+        }
+        /* 块元素继承块元素 孩子块元素不会继承父亲块元素的高度，但是会继承父亲块元素的宽度限制 ,虽然没继承但是块元素会有默认的高度*/
+        /* 按照想的情况 padding会撑大盒子，这里会撑开父亲的div,但是上面说了 不会继承高度，固然padding后变为p标签的高度为60px 宽度依然是100px
+         */
+
+         /* 所以在未设置weight/hight情况下 padding不会进行撑开 是往盒子内挤压
+            设置了weight/height padding就会撑开盒子 */
+    </style>
+</head>
+<body>
+    <div>
+        <p>1</p>
+    </div>
+</body>
+</html>

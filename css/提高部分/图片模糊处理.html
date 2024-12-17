@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        css图片滤镜:filter
+        filter:函数() 括号里面是像素单位
+        filter:blur(5px);
+        这个就是使得图片变成模糊的。
+        */
+        img{
+            filter: blur(5px);
+        }
+        img:hover{
+            filter:blur(0px);
+        }
+       
+
+        /*
+         calc()函数，此函数在声明一些属性值时可以进行一些计算
+        */
+        
+        .father{
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .son{
+            /* calc数据之间必须要有空格隔开！！！ */
+            width: calc(100% - 30px);
+            height: 30px;
+            background-color: skyblue;            
+        }
+ 
+    </style>
+</head>
+<body>
+    <img src="../tupian/agency bill.png" alt="">
+    <br><br>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *   {
+            margin: 0px;
+            width: 0px;
+        }
+        .m1{
+            height: 100px;
+            width: 100px;
+            /*line-height是对文字进行垂直居中 不是块元素 块元素垂直居中要单独弄*/
+            background-color: aqua;
+            text-align: center;
+        }
+
+        .m2{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            background-color: blue;
+            /* background-image: url(./tupian/bg5.png);
+            background-repeat: no-repeat; */
+        }
+
+        .m2 img{
+            height: 100%;
+            width: 100%;
+        }
+
+        .m32{
+           
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+        }
+
+        .m32::after{
+            display: inline-block;
+            content: "aa";
+            height: 100px;
+            width: 20px;
+            background-color: aquamarine;
+        }
+
+        .m32::before{
+            display: inline-block;
+            content: "bb";
+            height: 100px;
+            width: 20px;
+            background-color: blue;
+        }
+
+        .m33{
+           display: inline-block;
+            height: 50px;
+            width: 50px;
+            background-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+      记住 定位操作都使用position 紧贴着用浮动
+    -->
+      <!-- 
+         line-height是对文字进行居中对齐。对标签元素需要单独弄 ，用poisition   margin或者其他
+
+         line-height: ;
+         text-align: center;
+         可以使得该标签的img图标进行居中对齐 这个小点不要忘了
+      -->
+    <div class="m1">
+        <div class="m2"> <img src="./tupian/bg5.png" alt=""></div>
+    </div>
+ <br><br><br>
+    <div class="m32"><div class="m33"></div></div>
+    <!-- ::before这个伪元素始终是父亲的第一个儿子 
+       ::after这个伪元素是父亲的最后一个儿子 
+    -->
+</body>
+</html>

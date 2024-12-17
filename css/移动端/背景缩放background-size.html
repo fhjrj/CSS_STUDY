@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* 背景图片缩放拉升 background-size: 将背景图片进行放大或者变小
+         注意不是background-postion进行移动
+        */
+        div {
+            width: 500px;
+            height: 500px;
+            border: 2px solid red;
+            background: url(../css高级3/dog.jpg) no-repeat;
+            /* background-size: 图片的宽度 图片的高度; */
+            /* background-size: 500px 200px; */
+            /* 1.只写一个参数 肯定是宽度 高度省略了  会等比例缩放 */
+            /* background-size: 500px; */
+            /* 2. 里面的单位可以跟% 这个百分比是相对于父盒子的 下面是父盒子宽度的50% 即250px */
+            /* background-size: 50%; */
+            /* 3. cover 等比例拉伸 要完全覆盖div盒子(所有部分都进行覆盖) 可能有部分背景图片显示不全 */
+            /* background-size: cover; */
+            /* 4. contain 高度和宽度等比例拉伸 当宽度 或者高度(其中一个 这个注意) 铺满div盒子就不再进行拉伸了 可能有部分空白区域 */
+            /* background-size: contain; */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <p></p>
+</body>
+
+</html>

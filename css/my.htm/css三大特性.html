@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三大特性</title>
+</head>
+<style>
+    div {
+        color: red;
+        font-size: 30px;
+    }
+
+    div {
+        color: orange;
+        font-style:italic
+    }
+    /* CSS的层叠性 相同选择器设置相同样式，此时一个样式会覆盖另一个重叠的样式，原则是就近原则，(后面写的会覆盖前面的)
+    样式不冲突则不会进行重叠
+    */
+
+    /* CSS中子标签会继承父标签的某些样式，子标签即被包裹在内的标签，不是选择器那样的继承
+    子元素继承父元素的样式，可以是text-  font- line- color等
+    */
+    /*\CSS的继承属性，行内样式style="">id>类/伪类选择器>元素(标签)选择器>继承或者*
+                            1.0.0.0 > 0.1.0.0>0.0.1.0>  0,0,0,1     >  0,0,0,0
+
+    注意：继承的标签属性是0，不管父元素权重有多高，子元素继承都为零, 有 !important也如此
+
+    权重的叠加会出现在复合选择器中，注意后代选择器是父亲标签的后代有该特性，不是继承的概念，继承的是父亲标签的属性，但后代选择器是有自己的属性，这个要区分
+    后代选择器的特权0,0,0,1>继承属性0,0,0,0
+     */
+
+     p {
+        color: red;
+     }
+
+     .ss {
+        color: aqua;
+     }
+
+     #tt {
+        color :blueviolet;
+     }
+
+    #father {
+        color:chartreuse !important;
+     }
+
+
+</style>
+<body id="father">
+    <div>层叠性</div>
+    <div>
+        <span>继承性测试</span>
+    </div>
+    <p class="ss" id="tt" style="color: beige;">优先性测试</p>
+    <!-- 虽然body中有id标签，但是p继承了父亲标签的属性，所以father属性权重为0 -->
+</body>
+</html>

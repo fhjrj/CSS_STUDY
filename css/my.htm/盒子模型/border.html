@@ -1,0 +1,52 @@
+<!-- 
+border的三大属性
+border-width:定义的是边框的粗细，单位是px，使盒子变大
+border-style"定义的是盒子边框的样式  solid实线边框 dashed 虚线边框 dotted点线
+border-color:定义的是边框的颜色 
+盒子标签有很多 比如table table内的tr tb等等
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            border-width: 5px;
+            border-style:solid ;
+            border-color: blue;
+            border-collapse: collapse;
+            /* 相邻边框进行合并，两个盒子相邻时，左右边会重合，如果不进行合并，则重合部分的权重变为单个边的二倍，效果更深，所以要进行合并 */
+               }
+
+         p {
+            width: 300px;
+            height: 200px;
+            border: 3px orange dotted
+            /* 盒子的复合写法 border关键字将上面三个属性和在一起 */
+         }
+
+         span {
+            display:inline-block;
+            width: 200px;
+            height: 200px;
+            /* 可以给盒子的四条边分别设置属性 */
+            border:3px red dashed;
+            border-top: 3px blue dashed;
+            /* border-left:0cap; */
+            /* border-right:2px; */
+         }
+
+         
+    </style>
+</head>
+<body>
+    <div></div>
+    <p></p>
+    <span>text</span>
+    <br><br>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    /* 
+    scale，图片是放大和缩小
+    scale(x,y) 这里中间的元素是,隔开
+    单位就是像素。或者是整数
+
+
+    scale(2,2) 宽和高都扩大两倍
+    scale(0.5,0.5) 进行缩小
+
+    scale好处就是 就是可以设置转换中心点的缩放。 默认以中心点缩放
+
+    */
+
+  
+ div{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    margin: 100px auto;
+    transition: all 1s;
+    /*
+    设置放缩点
+    下面就是以左下为基准点 往上进行扩大200px 
+     */
+    transform-origin: left bottom;
+ }
+
+ div:hover{
+    /* 不写单位就是倍数 */
+    /* transform: scale(2,1); */
+
+    /* 等比例 等比例只写一个数字*/
+    /* transform: scale(1.5); */
+
+
+    /* 缩小 小于1就是缩小 */
+    /* transform: scale(0.5); */
+
+    /* scale进行放大或者缩小不会影响其他盒子 还可以设置中心点 */
+
+    transform: scale(2,2);
+   
+ } 
+
+ 
+
+    </style>
+</head>
+<body>
+     <div></div>    
+</body>
+</html>

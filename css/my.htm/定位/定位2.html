@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>static</title>
+    <style>
+        /* 
+        static: 默认定位方式 无定位的意思
+        静态定位还是按照标准流来排列的，没有边偏移
+        很少使用，其就是标准流。
+        */
+
+        /* 
+        relative: 相对定位是元素在移动位置的时候，是相对于原来它原来的位置（就是相对于自己）
+        不同于浮动，其定位后，原来位置不会释放，不同于浮动会释放
+        不脱标，保留原来位置
+        还有一个要进行注意，在同一排，相对定位会压住标准流和其他浮动的盒子
+        */
+
+    /* 
+      absolute: 绝对位置 其在移动的时候是相当于其祖先元素的
+      若无祖先元素或者祖先元素没有定位(祖先也未指定position属性)，则以浏览器文档为准
+
+    */
+
+        .box1{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            position: relative;
+            top:100px;
+            /* 原来位置相对于现在位置是往上移动，说明现在要往下 */
+            left:100px
+            /* 原来位置相对于现在位置是往左移动 说明现在是往右移动，原来位置相对于移动后才是往左 */
+
+            /* top left 片偏移 */
+            /* 还是标准流 */
+        }
+
+        .box2{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            /* 被覆盖 */
+        }
+
+
+
+        .box3{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            position: absolute;
+            right:100px;
+        }
+
+        .box4{
+            width: 200px;
+            height: 200px;
+            background-color:brown;
+            position: absolute;
+            right:0px;
+            top:0px
+        }
+
+        .father{
+            height: 500px;
+            width: 500px;
+            background-color: darkmagenta;
+        }
+            </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+     <div class="box3"></div>
+     <!-- 往右移动到浏览器距离边界100px -->
+      <div class="father">
+        <div class="box4"></div>
+      <!-- 父亲没定位，以浏览器文档为基准 移动到右上角 -->
+      </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小知识</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            padding: 10px 10px;
+            margin: 10px 10px;
+        }
+
+
+        .m1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .m2{
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: blue;   
+        }
+
+        .m3{
+            width: 200px;
+            height: 200px;
+            background-color:chartreuse;
+        }
+
+    .pp{
+        display: inline-block;
+            background-color: darkcyan;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+  <!-- margin的部分 不会进行染色-->
+    </div>
+    <br><br><br><br>
+    <div class="m1"></div>
+    <div class="m2"></div>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+     
+    <div class="m3">
+       <span class="pp"></span>
+       <div class="m2"></div>
+       <span class="pp"></span>
+       <!-- 浮动的盒子虽然覆盖后面的块标准流（若前面有块元素，则浮动换行，不影响前面标准流）
+           但会影响行内块元素，因为浮动给的属性使得标签具有行内块元素属性
+           所有说一浮全浮，用来设计横向
+         -->
+
+
+    </div>
+    <!--
+    浮动的盒子 在父子盒子内进行浮动起来 
+     -->
+
+      
+</body>
+</html>

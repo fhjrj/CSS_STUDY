@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>父亲有定位</title>
+    <style>
+        /*儿子元素有定位absolute,则以最近一级的有定位的祖先元素为参考点进行移动位置 */
+        .father{
+            width: 500px;
+            height: 500px;
+            background-color: brown;
+            position:relative;
+            /* 父级元素只要指定posstion标签即可，任意一种定位模式都可以 不用指定偏移量，未指定偏移量只是不会移动*/
+        }
+
+        .son1 {
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: absolute;
+            right:0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+   <div class="father">
+    <div class="son1"></div>
+    <!-- 跑到父级标签的右下角 -->
+
+    <!-- 
+    这里的重大特性就是，绝对定位不在占有原来的位置，其会脱标。和浮动类似 其会覆盖后面的标准流元素
+    -->
+
+    <!-- 
+    一般情况下 父亲必须要占有位置，儿子要浮动起来，所以父亲元素的定位一般设置为relative,儿子是绝对定位
+    父相子绝
+    -->
+
+   </div>
+</body>
+</html>

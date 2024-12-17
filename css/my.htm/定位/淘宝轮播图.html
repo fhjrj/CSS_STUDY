@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.tb{
+    width: 520px;
+    height: 280px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.tb img{
+    width: 100%;
+    height: 100%; 
+}
+
+a{
+   text-decoration: none;
+   color: gray;
+   width: 20px;
+   height: 30px;
+   display: inline-block;
+   background-color: rgba(0, 0, 0, 0.292);
+}
+
+.left{
+    position: absolute;
+    left:0px;
+    top:140px;
+    margin-top: -15px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 0 15px 15px 0;
+}
+
+.right{
+    position: absolute;
+    right:0px;
+    top: 140px;
+    margin-top: -15px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50% 0 0 50%;
+}
+
+.headd{
+    position: absolute;
+    width: 70px;
+    height: 14px;
+    bottom: 15px;
+    left:50%;
+    margin-left:-35px;
+    background-color:rgba(255, 255, 255, 0.3);
+    border-radius: 7px;
+}
+
+.headd li{
+    height: 8px;
+    width: 8px;
+    list-style: none;
+    border-radius: 4px;
+    background-color: white;
+    /* 因为所有在一排 所以可以浮动 也可以display inline-block 但是块元素化不一定会在父亲盒子内 但浮动一定在父亲盒子内 所以用浮动 这个注意 */
+    /* display: inline-block; */
+    /* margin: 3px; */
+    float: left;
+    margin: 3px;
+}
+
+.headd li:hover{
+    background-color: orange;
+}
+
+/* 绝对定位直接将元素显示为行内块 可以设置高和宽 */
+
+    </style>
+</head>
+<body>
+    <div class="tb">
+<img src="./图片/t01be9a0a9ed6b2d01e.webp">
+<a href="#" class="left"><</a>
+<a href="#" class="right">></a>
+<ul class="headd">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+    </div>
+</body>
+</html>

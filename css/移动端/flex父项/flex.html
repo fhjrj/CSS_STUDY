@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        flex弹性布局 移动端使用很广泛 PC端有部分不兼容
+        PC端还是传统布局 移动端使用弹性布局或者流式布局
+
+        flex弹性布局 使得不用添加浮动 不用进行消除浮动等等好处
+        flex添加就可以理解为添加浮动 消除块元素的独占一行的属性
+        */
+
+        div{
+            display: flex;
+            width: 80%;
+            height: 300px;
+            background-color: aqua;
+            justify-content: space-around;
+               /*上面使得子盒子在一排进行对称分布  */
+             }
+
+        div span{
+            /* width: 150px; */
+            flex:1;
+            height: 100px;
+            background-color:aquamarine;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div><span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+</html>

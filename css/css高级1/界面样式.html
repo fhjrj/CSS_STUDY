@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 鼠标样式 
+        cursor:pointer 小手样式
+        */
+
+        .two{
+            cursor: pointer;
+        }
+
+        .three{
+            cursor: move;
+            /* 十字架样式 */
+        }
+        .four{
+            cursor:text;
+            /* 文本样式 */
+        }
+
+        .five{
+            cursor: not-allowed;
+            /* 禁止样式 */
+        }
+
+
+        /* 表单轮廓线 */
+        input{
+            outline: none;
+            /* outline: 0; */
+            /* 取消轮廓线的原本样式 */
+        }
+
+        #not{
+            /* height: 100px;
+            width: 100px; */
+            border: yellowgreen 1px solid;
+            resize:none;
+            /* 文本域不可拖拽 */
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>11</li>
+        <li class="two">22</li>
+        <li class="three">33</li>
+        <li class="four">44</li>
+        <li class="five">55</li>
+    </ul>
+    <br><br><br>
+    <input type="text">
+    <textarea name="" id="not" cols="30" rows="20"></textarea>
+    <!-- 防止文本域右下角不能被拖拽  cols rows行列大小设置 -->
+</body>
+</html>

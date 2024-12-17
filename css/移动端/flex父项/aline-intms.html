@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ /* aline-items: 添加在父元素上 设置子元素在侧轴上的排列方式。
+     设置在侧轴上的排列。 但是其对应是子元素只有一行，当只有一行时 才能进行使用aline-items进行侧轴排列
+ */
+        div{
+            display: flex;
+            width: 800px;
+            height: 400px;
+            background-color: pink;
+            flex-direction: row;
+            justify-content: center;
+
+
+            /* 侧轴的居中对齐 */
+            align-items: center;
+            /* flex-start  侧轴从上到下 
+               flex-end 侧轴从下到上
+            */
+
+            /* align-items: stretch; */
+            /* 将元素对应着侧轴进行拉升，注意使用时不能设置子元素的高度*/
+            /* 注意 主轴是X轴时 上面的居中对齐是一排横着
+              当主轴是Y轴时 居中对齐是以列排列居中对齐的。一定要分清主轴还是侧轴
+            */
+        }
+
+        div span{
+            width: 150px;
+            height: 100px;
+            background-color: aquamarine;
+            color:#fff;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+     <div><span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* 
+        3D转换中的Z轴线 >0是往屏幕外 <0是往屏幕内。 Z轴的值就理解这个物体是往屏幕外跑还是屏幕内跑。理解为物体距离屏幕的位置
+        3D透视之perspective.只有加上该属性才会产生3D效果。还要注意 该属性要增加到3D转换元素的父元素上。和清除浮动类似。
+        透视理解为眼睛看到屏幕的距离(视距) 值越大，眼睛里屏幕的距离越远 物体也就越小,3D效果也越小。值越小3D效果越明显
+
+       */
+
+       body{
+        perspective:200px;
+        /* 透视越小 说明该物体里我们双眼更近，物体也就越大。反过来就是越小 */
+       }
+       .ppg{
+        height: 200px;
+        width: 200px;
+        background-color: pink;
+        margin: 0 auto;
+        transform: translate3d(100px,100px,-100px);
+        /* translate3d(x,y,z) */
+        /* 必须要跟上透视才能看见效果 */
+        /* translateZ 沿着Z轴移动(平移)  后面的单位一般是px*/
+        /* x,y,z是不能省略的，如果没有就写0 */
+       }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="ppg"></div>
+    <br><br>
+</body>
+</html>

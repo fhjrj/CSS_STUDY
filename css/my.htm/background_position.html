@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background</title>
+     <style>
+        div{
+          height: 100px;
+          width: 100px;
+          background-image: url(../tupian/bg3.png);
+          background-repeat: no-repeat;
+        }
+
+        .left{
+            /* 第一个位置是X位置 水平  为正 往右  为负 往左
+               第二个位置是Y位置 垂直  为正 往下  为负 往上
+             
+            */
+           background-position:20px 20px ;
+        }
+
+        .left2{
+           background-position:-20px -20px ;  
+        }
+     </style>
+</head>
+<body>
+    <div class="left"></div>
+    <!-- 图片右移 -->
+    <br><br>
+    <div class="left2"></div>
+    <br><br>
+    <div></div>
+    <br><br>
+    <div></div>
+</body>
+</html>

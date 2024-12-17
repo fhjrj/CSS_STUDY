@@ -1,0 +1,69 @@
+<!-- css中标签大致分类两类
+ 块元素：
+ 自己独占一行
+ 高度，宽度，边外距可以控制
+ 默认宽度是容器100%
+ 是一个容器/盒子，壳子往里面放多个行内或块元素
+ 文字类的元素(比如p标签，h1~h6，不允许放块级元素)
+
+
+
+ 行内元素： 
+一行可以放多个，相邻行内元素在一行上
+高宽设置是无效的
+默认宽度就是其本身内容宽度
+行内元素只能容纳文本或其他行内元素
+
+
+特殊情况:
+a标签可以放块元素但是a是行内元素
+img，input，td标签块元素有行内元素属性，可以一行放置多个，设置高和宽
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ a {
+    width: 200px;
+    height: 200px;
+    background-color: palevioletred;
+    display: block;
+    /* a标签是行内元素，不能设置宽和高，那就将其转换为块元素
+    关键词
+    display: block;
+    */
+ }
+
+ div {
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    display: inline;
+    /* 块元素转换为行内元素 */
+ }
+
+ span {
+    width: 150px;
+    height: 150px;
+    background-color: chocolate;
+    display: inline-block;
+    /* 转换为行内块元素,inline-block */
+ }
+    </style>
+</head>
+<body>
+    <a href="#">标签元素的转换</a>
+    <a href="#">标签元素的转换</a>
+    <br><br>
+    <div>我是块元素div</div>
+    <div>我是块元素div</div>
+    <br>
+    <span>转换为行内块</span>
+    <span>转换为行内块</span>
+
+</body>
+</html>

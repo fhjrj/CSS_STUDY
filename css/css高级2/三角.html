@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 100px auto;
+            height: 100px;
+            width: 100px;
+            border-right: 3px solid black;
+            border-bottom: 3px solid black;
+            transform: rotate(45deg);
+            transition: all 1s;
+        }
+
+
+        div:hover{
+            transform: rotate(225deg);
+            /* 这里计算是重新从未旋转的位置开始计算 而不是已经旋转了45°开始计算 */
+        }
+        /* 注意 一般小图标可以用伪元素进行设计 这个注意 */
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

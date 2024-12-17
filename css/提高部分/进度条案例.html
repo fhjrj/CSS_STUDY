@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+        div{
+            height: 10px;
+            width: 200px;
+            background-color: #fff;
+            border-radius: 5px;
+           
+        }
+
+        .father{
+            border: 1px solid red;
+            margin: 10px auto;
+            padding: 1px 0 1px 0px;
+        }
+
+        .son{
+        height: 100%;
+        width: 0px;
+        background-color: red;
+        transition: width 0.5s;
+        }
+
+        .father:hover .son{
+            width:100%;
+        }
+        /* 谁做过渡元素 就给谁+ */
+
+        
+    </style>
+</head>
+<body>
+    <div class="father">
+      <div class="son"></div>
+    </div>
+</body>
+</html>

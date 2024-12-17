@@ -1,0 +1,229 @@
+body{
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 14px;
+    color:#666;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    background-color: rgba(128, 128, 128, 0.575);
+    /* 不要忘了行高不带单位是字体大小的1.5倍数  
+    规定了BODY长度 就是版心的长度
+    14*1.5 */
+}
+
+
+img{
+    /* 这里注意 图片默认底部有空白缝隙。产生的原因是图片默认与该行的基线进行对齐，基线不在顶部 所以出现空白。
+      解决方法就是让图片与头部对齐,居中对齐，牢记 */
+    vertical-align: middle;
+}
+
+a{
+    text-decoration: none;
+    color: #666;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* 注意C3的盒子模型 */
+}
+
+.app{
+    height: 45px;
+}
+
+.app ul li{
+    list-style: none;
+    float: left;
+    height: 45px;
+    background-color: #333333;
+    line-height: 45px;
+    text-align: center;
+    color:#fff
+    /* position: relative; */
+}
+
+.app ul li:nth-child(1){
+    width: 8%;
+}
+
+.app ul li:nth-child(1) img{
+    /* position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%); */
+    /* 只用该宽度 高度是等比例缩放 */
+    width: 10px;
+}
+
+
+.app ul li:nth-child(2){
+    width: 10%;
+}
+
+.app ul li:nth-child(2) img{
+    width: 30px;
+    /* 注意图片是默认与文字的基线对齐 */
+    vertical-align: middle;
+}
+
+.app ul li:nth-child(3){
+    width: 57%;
+}
+
+.app ul li:nth-child(4){
+    background-color: #F63515;
+    width: 25%;
+}
+
+/* 图片属于行内块 一般出现行内块都会有  vertical-align: middle;  */
+
+.serach{
+    position: fixed;
+    /* 设置固定定位 使其固定在可视区 宽度和父盒子一样宽  */
+   height: 44px;
+   width: 100%;
+   overflow: hidden;
+   min-width: 320px;
+    max-width: 640px;
+}
+
+.serach .left{
+position: absolute;
+top:0px;
+left:0px;
+width: 40px;
+height: 44px;
+}
+
+.serach .left::before{
+    content: "";
+    display: block;
+    height: 18px;
+    width: 20px;
+    background: url(../images/s-btn.png) no-repeat;
+    background-size: 20px 18px;
+    margin: 14px 0px 0px 15px;
+}
+
+.serach .right{
+    position: absolute;
+    top:0px;
+    right:0px;
+    width: 40px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    }
+
+
+.serach .middle{
+    position: relative;
+    height: 30px;
+    background-color: #fff;
+    margin: 0 50px;
+    border-radius: 15px;
+    margin-top:7px;
+    /* 这里不加 overflow: hidden;  父子盒子会塌陷是因为父亲盒子有magin:0 auto  这里变相的制定了margin-top:0px， 这时父子盒子都指定了margin-top 就会塌陷。 即使指定了外边距为0px
+     */
+}
+
+.jd-icon{
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top:8px;
+    left:13px;
+}
+
+.jd-icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.jd-icon::after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+    right:-8px;
+    /* right>0往内 <0则往外跑 不要忘了伪元素的定位+- */
+    top:0px;
+}
+
+.middle .jingling{
+    position: absolute;
+    top:8px;
+    left: 50px;
+    width: 18px;
+    height: 15px;
+    background: url(../images/jd-sprites.png) no-repeat -81px 0;
+    background-size:200px auto ;
+    /* 精灵图的缩放 显示background-size缩小像素比，然后以缩放的图来进行测量小图标的位置 */
+}
+
+.main .slider img{
+   width: 100%;
+}
+
+
+.brand{
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    /* 如果没有hidden 这里只是父亲的边角为椭圆。但是图片没有变为椭圆 
+      图片的角落超出父亲 所以加上就把超出部分给隐藏了
+    */
+}
+
+.brand div{
+    width: 33.33%;
+    float: left;
+}
+
+.brand div img{
+    /* div父盒子宽度为33.33% 儿子的img宽度是100% */
+    width: 100%;
+}
+
+nav a{
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+
+ .main nav a img{
+    width: 40px;
+    margin: 10px 0;
+}
+
+.main nav a span{
+    display: block;
+}
+
+.news a{
+    float: left;
+}
+
+.news a:nth-child(1){
+    width: 50%;
+}
+
+.news a:nth-child(2){
+    border-left:1px solid #ccc;
+    width: 25%;   
+}
+
+.news a:nth-child(3){
+    border-left:1px solid #ccc;
+    width: 25%;
+}
+
+.news img{
+    width: 100%;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.one{
+   height: 100px;
+   width: 100px;
+   text-align: center;
+   line-height: 100px;
+   background-color:pink;
+}
+
+.one a{
+    /* display: inline-block; */
+    font-size: 14px;
+    /* height: 14px;
+    width: 14px;
+     不能增加此属性
+     */
+}
+    </style>
+</head>
+<body>
+    <!-- 
+    对于通过文本字段将元素撑起来的标签的情况，可以使用
+     text-align: center;
+     line-height:父亲盒子高度来实现居中对齐;
+     这里绝对不能给盒子高度和宽度。不然盒子就要跑
+     
+     行内元素：不会继承父亲的高度和宽度。但是行内块元素/块元素会继承父亲的高度和line-height
+     牢记上面的情况
+     更多的居中对齐是position
+
+    -->
+     <div class="one">
+        <a href="#">dde</a>
+     </div>
+</body>
+</html>

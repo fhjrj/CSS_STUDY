@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+     transfrom可以实现元素的位移，旋转和缩放等效果
+     这个是二维平面的转换 
+      
+     关键字: translate 这个是对图片进行移动 类似于定位
+
+     中间是逗号隔开
+    -->
+
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+            /* 参数1X轴位置，参数2是Y轴位置 */
+            /* transform: translate(x,y); */
+            /* transform: translate(100px,100px); */
+
+          /* 只移动X轴的位置 */
+            /* transform: translateX(100px); */
+
+            /* 
+              只移动Y轴的位置
+             transform: translateY(100px);
+             transform: translate(0,100px);
+             x>0往右 y>0往下
+            */
+        }
+
+        /* 
+        translate对行内标签没有用
+        其最大的特点是，移动后不会影响其他元素的位置。这是浮动和定位不具有的。因为浮动和定位移动后，其他盒子会补上去。但是translate不会，其不会动
+        */
+       
+        div:last-child{
+            background-color: blue;
+        }
+
+        div:first-child{
+            transform: translate(30px,30px);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <!-- 蓝色盒子没移动 -->
+</body>
+</html>

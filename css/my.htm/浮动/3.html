@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <style>
+     .nav {
+        height: 460px;
+        width:800px ;
+        background-color: aquamarine;
+     }
+
+     .nav .left{
+        width: 200px;
+        padding:20px 0;
+        height: 420px;
+        background-color: black;
+     }
+
+     * {
+        margin: 0px;
+        padding: 0px;
+        /* 消除 块元素自带的padding和margin*/
+     }
+
+     .left>a{
+        background-color: blue;
+        height: 42px;
+        padding-left: 20px;
+        display: block;
+        color: pink;
+        line-height: 42px;
+     }
+   </style>
+</head>
+<body>
+    <div class="nav">
+     <div class="left">
+     <a href="#">1</a>
+     <a href="#">2</a>
+     <a href="#">3</a>
+     <a href="#">4</a><a href="#">5</a><a href="#">6</a><a href="#">7</a><a href="#">8</a><a href="#">9</a><a href="#">10</a>
+     <!-- 这里为什么不用p标签? 因为块元素自带margin,会撑大盒子 行内元素，行内块元素不带margin 即使display为block，也不会设置有margain-->
+      <!-- 想用块标签 最好要消除margain和padding -->
+     </div>
+    </div>
+    <p>
+        wdwd
+    </p>
+</body>
+</html>

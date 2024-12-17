@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粘性定位</title>
+    <!-- 
+    关键字sticky 是固定定位和相对定位的混合
+    特点：
+    以浏览器的可视窗口为参照点移动元素（固定定位位置）
+    粘性定位是占有原来位置的
+    必须添加边偏移才会其效果，不加边偏移则当作相对定位
+    -->
+
+<style>
+    body{
+        height: 3000px;
+    }
+
+    .nav{
+        width: 800px;
+        height: 50px;
+        background-color: PINk;
+        margin:100 auto;
+        position: sticky;
+        top:0px;
+        /* 当其距离可是窗口顶部0时，就变成为粘性定位了 */
+    }
+</style>
+</head>
+<body>
+    <div class="nav">我是导航栏</div>
+</body>
+</html>

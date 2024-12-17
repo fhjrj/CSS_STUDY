@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        /*  
+        /* 1. 我们有一个 50 * 50的盒子需要一个背景图片，但是根据分析这个图片还是要准备2倍， 100*100 */
+        /* 2. 我们需要把这个图片缩放一半，也就是 50*50  background-size*/
+        
+        div {
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+            background: url(./apple50\(1\).jpg) no-repeat;
+            /* 这种写法始终限定了背景是50*50 即使在移动端后 图片进行物理像素比进行放大 其也会重新变为50*50 */
+            background-size: 50px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+<!-- 移动端开发页面有两种 一个是响应式的，一个是单独式的 -->
+</html>

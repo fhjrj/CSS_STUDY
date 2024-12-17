@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            box-sizing: border-box;
+        }
+        
+
+        .pp{
+           width: 1200px;
+           margin: 20px auto;
+        }
+
+        .clear::after{
+            content: "";
+            clear: both;
+            display: block;
+            visibility: collapse;
+            height: 0px;
+        }
+
+        li{
+            height: 30px;
+            width: 30px;
+            border-radius: 15px;
+            border: 1px solid aquamarine;
+            float: left;
+            margin:0 15px;
+            text-align: center;
+            line-height: 30px;
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        li:hover{
+            transform: scale(1.2);
+        }
+
+        p{
+            display: block;
+            height: 30px;
+            width: 30px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="pp clear qq">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>
+    </div> 
+    <p></p>
+</body>
+</html>

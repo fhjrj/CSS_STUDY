@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div2{
+            height: 300px;
+            width: 300px;
+            background-color: brown;
+        }
+     .div1{
+        float: right;
+        height: 200px;
+        width: 200px;
+        background-color: pink;
+
+     }
+
+     .div1::after{
+        display: block;
+        content: "";
+        height: 100px;
+        width: 20px;
+        background-color: aqua;
+     }
+
+     .div1::before{
+        display: block;
+        content: "";
+        height: 100px;
+        width: 20px;
+        background-color: aqua;
+     }
+     /* 创建的伪元素是在盒子内部 */
+     /* 行内块元素（尤其是a） 没有border属性（即使显示出宽和高，也是里面元素撑大的。其本身没有盒子属性） 想要给其border属性 必须转化为行内块/块级元素 */
+     /* 如果标签要设置鼠标移动时，显示border（显示边框），如果一开始未设置border，则在经过是就会变大，标签就会看上去就是抖动的
+       解决方法就是在一开始为标签设置border属性 颜色显示为transparent 这样就不会变大了
+     */
+    </style>
+</head>
+<body>
+
+    <div class="div2">
+        <div class="div1"></div>
+    </div>
+</body>
+</html>
